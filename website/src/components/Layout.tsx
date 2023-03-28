@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
             }} />
             <div className='relative flex flex-col min-h-screen'>
                 <Header />
-                <main className="grow flex flex-col items-center bg-neutral-800">
+                <main className="grow flex flex-col items-center bg-slate-50">
                     {children}
                 </main>
                 <Footer />

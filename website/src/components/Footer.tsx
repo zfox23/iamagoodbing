@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 export const Footer = ({ }) => {
     return (
-        <footer className='w-full bg-slate-50 dark:bg-neutral-900 relative h-56 z-40 box-content'>
+        <footer className='w-full bg-fuchsia-800 relative z-40 box-content'>
             <Helmet>
                 <script type="text/javascript">
                     {`
@@ -16,6 +16,17 @@ export const Footer = ({ }) => {
                 `}
                 </script>
             </Helmet>
+            <div className='flex flex-col items-center justify-center text-slate-50 p-3 gap-2'>
+                <a href="#" className='underline font-semibold text-xl'>Return to Top</a>
+                <div className='text-sm'>
+                    <p><span>A project by </span>
+                        <a href="https://liverickson.com" className='underline' target='_blank'>Liv Erickson</a>
+                        <span> and </span>
+                        <a href="https://zachfox.photography" className='underline' target='_blank'>Zach Fox</a>
+                        <span>.</span>
+                    </p>
+                </div>
+            </div>
         </footer>
     )
 }

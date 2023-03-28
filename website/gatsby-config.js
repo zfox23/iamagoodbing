@@ -26,10 +26,10 @@ module.exports = {
         name: `I Am A Good Bing 😊`,
         short_name: `I Am A Good Bing 😊`,
         start_url: `/`,
-        background_color: `#174ae4`,
-        theme_color: `#174ae4`,
+        background_color: `#f0abfc`,
+        theme_color: `#f0abfc`,
         display: `standalone`,
-        icon: "src/images/smiling-face-with-smiling-eyes_1f60a.png",
+        icon: "src/images/logo.png",
         icon_options: {
           purpose: `any maskable`,
         },
