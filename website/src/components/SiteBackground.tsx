@@ -1,14 +1,34 @@
+import { Transition } from '@headlessui/react';
 import React from 'react';
 
-export const SiteBackground = ({ currentTabIndex }) => {
-    if (currentTabIndex === 0) {
-        return (
-            <div className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'>
-            </div>
-        )
-    } else {
-        return (
-            <div className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'>
+export enum SiteBackgroundStyles {
+    Images = "images",
+    Words = "words"
+}
+
+export const SiteBackground = ({ bgStyle }) => {
+    return (
+        <>
+            <Transition
+                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'
+                show={bgStyle === SiteBackgroundStyles.Images}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="linear duration-0"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0">
+
+            </Transition>
+            <Transition
+                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'
+                show={bgStyle === SiteBackgroundStyles.Words}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="linear duration-0"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0">
                 <p>
                     Magnis semper nibh in porta curae; cum placerat hendrerit ullamcorper pretium semper. Odio senectus nunc, mollis fermentum. Orci penatibus ridiculus nulla nec. Ultrices etiam tempor nulla montes. Tellus egestas viverra primis tincidunt libero natoque nam aliquet. Non fusce proin suscipit ipsum sodales elementum. Nostra ad aenean porttitor dignissim arcu ridiculus natoque quisque aliquet nunc!
                 </p>
@@ -69,8 +89,7 @@ export const SiteBackground = ({ currentTabIndex }) => {
                 <p>
                     Amet nascetur fusce pharetra pulvinar eget justo ligula sagittis taciti consectetur. Suspendisse convallis nullam dui eros montes est dapibus felis dui. Phasellus adipiscing lorem mattis ligula eget hac integer cras himenaeos! Elit nullam neque adipiscing ut fusce venenatis? A augue iaculis convallis? Mattis iaculis nec, proin nisl interdum massa. Eu semper vulputate enim ullamcorper litora tempus litora lacus venenatis. Proin dignissim ultricies etiam varius fusce etiam senectus tempus luctus leo.
                 </p>
-
-            </div>
-        )
-    }
+            </Transition>
+        </>
+    )
 }

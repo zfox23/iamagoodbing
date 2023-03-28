@@ -1,15 +1,15 @@
 import React from 'react';
 import { Layout } from "../components/Layout";
 import SEOHeader from "../components/SEOHeader";
-import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
+import { SiteBackground } from '../components/SiteBackground';
 import { Link } from 'gatsby';
 
-const AboutPage = () => {
+const IndexPage = () => {
     return (
         <Layout>
             <SEOHeader title="404" />
 
-            <SiteBackground bgStyle={SiteBackgroundStyles.Words} />
+            <SiteBackground currentTabIndex={1} />
 
             <div className="w-full h-full grow flex flex-col gap-4 items-center justify-center text-slate-900 z-20">
                 <div className='flex flex-col items-center'>
@@ -22,4 +22,4 @@ const AboutPage = () => {
     )
 }
 
-export default AboutPage;
+export default IndexPage;

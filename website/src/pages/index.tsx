@@ -4,7 +4,7 @@ import SEOHeader from "../components/SEOHeader";
 import { graphql } from 'gatsby';
 import { ContentCard } from '../components/ContentCard';
 import { Tab } from '@headlessui/react';
-import { SiteBackground } from '../components/SiteBackground';
+import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
 
 const IndexPage = ({ data }) => {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -15,15 +15,25 @@ const IndexPage = ({ data }) => {
 
     const silly = data?.allContentJson.nodes.filter((node) => {
         return node.categories.includes("silly");
+    }).sort((a, b) => {
+        const aDate = new Date(a.datetimeISO);
+        const bDate = new Date(b.datetimeISO);
+
+        return aDate < bDate;
     });
 
     const serious = data?.allContentJson.nodes.filter((node) => {
         return node.categories.includes("serious");
+    }).sort((a, b) => {
+        const aDate = new Date(a.datetimeISO);
+        const bDate = new Date(b.datetimeISO);
+
+        return aDate < bDate;
     });
 
     const categories = {
-        "silly": silly,
-        "serious": serious
+        "Silly": silly,
+        "Serious": serious
     }
 
     useEffect(() => {
@@ -42,26 +52,26 @@ const IndexPage = ({ data }) => {
         <Layout>
             <SEOHeader title="I Am A Good Bing 😊" />
 
-            <SiteBackground currentTabIndex={currentTabIndex} />
+            <SiteBackground  bgStyle={currentTabIndex === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
-            <div className="w-full z-20 max-w-6xl px-2 py-24 sm:px-0">
+            <div id='top' className="w-full z-20 max-w-6xl px-2 py-24 sm:px-0">
                 <Tab.Group
                     selectedIndex={currentTabIndex}
                     onChange={(newIndex) => {
                         setCurrentTabIndex(newIndex);
                     }}
                 >
-                    <Tab.List className="flex space-x-1 rounded-t-md bg-fuchsia-700/20 p-1">
+                    <Tab.List className="flex space-x-2 p-2 rounded-t-md bg-fuchsia-700/50">
                         {Object.keys(categories).map((category) => (
                             <Tab
                                 key={category}
                                 className={({ selected }) =>
                                     classNames(
-                                        'w-full rounded-md py-2.5 leading-5 text-fuchsia-700',
+                                        'w-full rounded-md py-2.5 leading-5 transition-all',
                                         'ring-white ring-opacity-60 ring-offset-2 ring-offset-fuchsia-400 focus:outline-none focus:ring-2 text-xl font-semibold transition-all duration-100',
                                         selected
-                                            ? 'bg-white shadow'
-                                            : 'text-fuchsia-100 hover:bg-white/[0.12] hover:text-slate-900'
+                                            ? 'text-fuchsia-700 bg-white shadow'
+                                            : 'text-slate-700 bg-fuchsia-700/10 hover:bg-fuchsia-700/20'
                                     )
                                 }
                             >
@@ -69,7 +79,7 @@ const IndexPage = ({ data }) => {
                             </Tab>
                         ))}
                     </Tab.List>
-                    <Tab.Panels className="flex flex-wrap gap-4 md:gap-8 justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-slate-100 rounded-b-md border-b-4 border-fuchsia-700/50">
+                    <Tab.Panels className="flex flex-wrap gap-4 md:gap-8 justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-slate-100/75 rounded-b-md border-b-4 border-fuchsia-700/50">
                         {Object.values(categories).map((contentData, idx) => (
                             <Tab.Panel
                                 key={idx}
@@ -103,7 +113,7 @@ query IndexContentQuery {
             title
             categories
             fontAwesomeIcon
-            datetime
+            datetimeISO
             image {
                 src {
                     childImageSharp {
@@ -118,7 +128,7 @@ query IndexContentQuery {
             html
             links {
                 href
-                linkText
+                text
             }
         }
     }
