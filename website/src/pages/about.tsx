@@ -18,7 +18,7 @@ const AboutPage = () => {
                 <div className='space-y-16'>
                     <div className='space-y-4'>
                         <h1 className='text-2xl font-semibold'>About This Website</h1>
-                        <p>Liv and Zach</p>
+                        <p>Liv and Zach are creative technologists exploring how to be joyful, yet responsible, humans in a world increasingly full of AI. Generative AI content brings us a lot of joy, but we're also cognizant of and worried about what AI technology is mining from us and the impacts it will have on human society. <br><br> <i>IAmAGoodBing<i> attempts to balance the fun and joy that can come from new forms of expression with a critical eye towards not repeating the mistakes of the past.</p>
                     </div>
 
                     <div className='space-y-4'>
