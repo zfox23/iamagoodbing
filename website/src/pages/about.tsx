@@ -12,13 +12,21 @@ const AboutPage = () => {
 
             <SiteBackground bgStyle={SiteBackgroundStyles.Words} />
 
-            <div className='p-4 my-24 rounded-md text-slate-900 bg-fuchsia-100/90 flex flex-col w-full max-w-6xl z-20'>
+            <div className='p-4 py-24 rounded-md text-slate-900 bg-fuchsia-100/90 flex flex-col w-full max-w-6xl z-20'>
                 <StaticImage className='mb-8' src="../images/logo-tight.png" alt="The site logo is a smiling face emoji inside a laptop emoji. The laptop emoji is on fire." height={256} objectFit='contain' quality={100} />
 
-                <div className='space-y-8'>
-                    <div>
-                        <h1 className='text-2xl font-semibold mb-4'>About This Website</h1>
+                <div className='space-y-16'>
+                    <div className='space-y-4'>
+                        <h1 className='text-2xl font-semibold'>About This Website</h1>
                         <p>Liv and Zach</p>
+                    </div>
+
+                    <div className='space-y-4'>
+                        <h1 className='text-2xl font-semibold'>Background Graphics</h1>
+                        <p>In <span className='font-semibold'>😜 Silly Mode</span>, the background images you see were generated using <a href="https://en.wikipedia.org/wiki/Stable_Diffusion" target='_blank'><span className='underline'>Stable Diffusion</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>, an AI model used to create images from a text prompt. For example, the image below was generated using the text prompt "Utopia skyline, varied building heights, green parks, sunset, photorealistic":</p>
+                        <StaticImage className='rounded-md w-full max-w-md' src="../content/backgroundImages/jpg/01377-3207551456-Utopia skyline, varied building heights, green parks, sunset, photorealistic.jpg" alt="Utopia skyline, varied building heights, green parks, sunset, photorealistic" />
+
+                        <p>In <span className='font-semibold'>🤨 Serious Mode</span>, the faint background text you may see is a copy of <a href="#" target='_blank'><span className='underline'>&lt;INSERT FTC THING HERE&gt;</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>.</p>
                     </div>
 
                     <div className='space-y-4'>

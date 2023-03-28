@@ -25,8 +25,10 @@ export const Footer = ({ }) => {
                 <div className='text-sm'>
                     <p><span>A project by </span>
                         <a href="https://liverickson.com" target='_blank'><span className='underline'>Liv Erickson</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
-                        <span> and </span>
+                        <span>, </span>
                         <a href="https://zachfox.photography" target='_blank'><span className='underline'>Zach Fox</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <span>, and </span>
+                        <a href="https://github.com/zfox23/iamagoodbing" target='_blank'><span className='underline'>open-source contributors like you</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
                         <span>.</span>
                     </p>
                 </div>
