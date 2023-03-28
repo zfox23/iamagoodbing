@@ -1,12 +1,21 @@
 import { Transition } from '@headlessui/react';
-import React from 'react';
+import React, { useState } from 'react';
+import { useBackgroundImages } from '../hooks/useBackgroundImages';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export enum SiteBackgroundStyles {
     Images = "images",
     Words = "words"
 }
 
-export const SiteBackground = ({ bgStyle }) => {
+export const SiteBackground = ({ bgStyle, backgroundImageIdx = 0 }) => {
+    const backgroundImages = useBackgroundImages();
+
+    if (!backgroundImageIdx) {
+        const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
+        backgroundImageIdx = newBGImageIdx;
+    }
+
     return (
         <>
             <Transition
@@ -18,8 +27,14 @@ export const SiteBackground = ({ bgStyle }) => {
                 leave="linear duration-0"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0">
+                <GatsbyImage
+                    className={`!absolute inset-0 blur-md scale-110 saturate-50 brightness-75 touch-none`}
+                    image={getImage(backgroundImages[backgroundImageIdx].src)!}
+                    objectFit="cover"
+                    alt={backgroundImages[backgroundImageIdx].alt} />
 
             </Transition>
+
             <Transition
                 className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'
                 show={bgStyle === SiteBackgroundStyles.Words}

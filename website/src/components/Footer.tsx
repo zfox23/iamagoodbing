@@ -8,7 +8,7 @@ export const Footer = ({ }) => {
     const isHome = isBrowser && window.location.pathname === '/';
 
     return (
-        <footer className='w-full bg-fuchsia-900/90 relative z-40 box-content'>
+        <footer className='w-full bg-fuchsia-900/95 relative z-40 box-content'>
             <Helmet>
                 <script type="text/javascript">
                     {`

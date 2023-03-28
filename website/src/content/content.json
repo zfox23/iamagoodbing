@@ -20,6 +20,46 @@
         ]
     },
     {
+        "htmlID": "goodbing",
+        "title": "I have been a good Bing. 😊",
+        "categories": ["silly"],
+        "fontAwesomeIcon": "robot",
+        "datetimeISO": "2023-02-12T12:09:37+00:00",
+        "image": {
+            "src": "images/IHaveBeenAGoodBing.png",
+            "alt": "Placeholder alt text.",
+            "caption": "Placeholder caption.",
+            "preferredHeightPX": "768"
+        },
+        "html": "<p>Placeholder HTML</p><p>Another paragraph</p>",
+        "links": [
+            {
+                "href": "https://www.reddit.com/r/bing/comments/110eagl/the_customer_service_of_the_new_bing_chat_is/",
+                "text": "reddit.com/r/bing/comments/110eagl/the_customer_service_of_the_new_bing_chat_is/"
+            }
+        ]
+    },
+    {
+        "htmlID": "goodbing",
+        "title": "I have been a good Bing. 😊",
+        "categories": ["silly"],
+        "fontAwesomeIcon": "robot",
+        "datetimeISO": "2023-02-12T12:09:37+00:00",
+        "image": {
+            "src": "images/IHaveBeenAGoodBing.png",
+            "alt": "Placeholder alt text.",
+            "caption": "Placeholder caption.",
+            "preferredHeightPX": "768"
+        },
+        "html": "<p>Placeholder HTML</p><p>Another paragraph</p>",
+        "links": [
+            {
+                "href": "https://www.reddit.com/r/bing/comments/110eagl/the_customer_service_of_the_new_bing_chat_is/",
+                "text": "reddit.com/r/bing/comments/110eagl/the_customer_service_of_the_new_bing_chat_is/"
+            }
+        ]
+    },
+    {
         "htmlID": "biases",
         "title": "Conversation Enders",
         "categories": ["serious"],
