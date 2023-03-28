@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://iamagoodbing.ai",
     title: "I Am A Good Bing 😊",
-    titleTemplate: "%s · I Am A Good Bing",
+    titleTemplate: "%s · Silly and Serious Examples of AI Gone Wrong",
     description: "Here's why modern AI isn't ready for public use.",
     image: "/mainMetaImage.jpg"
   },

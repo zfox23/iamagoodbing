@@ -8,7 +8,9 @@ export const Layout = ({ children }) => {
         <React.Fragment>
             <Helmet htmlAttributes={{
                 lang: 'en',
-            }} />
+            }}>
+                <script src="https://kit.fontawesome.com/0eb4525a07.js" crossOrigin="anonymous"></script>
+            </Helmet>
             <div className='relative flex flex-col min-h-screen'>
                 <Header />
                 <main className="grow flex flex-col items-center bg-slate-50">
