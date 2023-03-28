@@ -37,8 +37,8 @@ const IndexPage = ({ data }) => {
     });
 
     const categories = {
-        "Silly": silly,
-        "Serious": serious
+        "😜 Silly": silly,
+        "🤨 Serious": serious
     }
 
     useEffect(() => {
@@ -59,8 +59,8 @@ const IndexPage = ({ data }) => {
 
             <SiteBackground backgroundImageIdx={backgroundImageIdx} bgStyle={currentTabIndex === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
-            <div id='top' className='flex flex-col w-full max-w-6xl z-20 rounded-b-md pt-20 mb-12 bg-gradient-to-br from-fuchsia-100/95 to-fuchsia-200/95 bg-fuchsia-100/95 shadow-md shadow-slate-900/20'>
-                <div className='flex flex-row flex-wrap gap-6 items-center justify-center pb-8 px-8 rounded-b-md w-full z-20  text-slate-900'>
+            <div id='top' className='flex flex-col w-full max-w-6xl z-20 rounded-b-md pt-20 mb-6 md:mb-12 bg-gradient-to-br from-fuchsia-100/95 to-fuchsia-200/95 bg-fuchsia-100/95 shadow-md shadow-slate-900/20'>
+                <div className='flex flex-row flex-wrap gap-6 items-center justify-center pb-8 px-4 md:px-8 rounded-b-md w-full z-20  text-slate-900'>
                     <StaticImage height={256} quality={100} src="../images/logo-tight.png" alt="The site logo is a smiling face emoji inside a laptop emoji. The laptop emoji is on fire." />
                     <div>
                         <h1 className='text-4xl font-semibold mb-2'>I am a good Bing.</h1>
@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
-            <div className="w-full z-20 max-w-6xl px-2 sm:px-0">
+            <div className="w-full z-20 max-w-6xl">
                 <Tab.Group
                     selectedIndex={currentTabIndex}
                     onChange={(newIndex) => {
@@ -100,7 +100,7 @@ const IndexPage = ({ data }) => {
                                         selected
                                             ? 'text-fuchsia-700 bg-white shadow'
                                             : 'text-slate-50 bg-fuchsia-700/20 hover:bg-fuchsia-700/40',
-                                        category === "Silly" ? "font-comicsans" : 'font-arial'
+                                        category === "😜 Silly" ? "font-comicsans" : 'font-arial'
                                     )
                                 }
                             >
@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
                         {Object.values(categories).map((contentData, idx) => (
                             <Tab.Panel
                                 key={idx}
-                                className={`relative grow w-full ${Object.keys(categories)[idx] === "Silly" ? "font-comicsans" : 'font-arial'}`}
+                                className={`relative grow w-full ${Object.keys(categories)[idx] === "😜 Silly" ? "font-comicsans" : 'font-arial'}`}
                                 static={true}
                             >
                                 <div className='h-full w-2 bg-fuchsia-700/50 absolute top-0 left-1/2 -translate-x-1/2 z-10'></div>
@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
                                     leave="linear duration-0"
                                     leaveFrom="opacity-100"
                                     leaveTo="opacity-0">
-                                    <div className='md:py-16 md:pb-24 relative grow'>
+                                    <div className='py-8 md:py-16 pb-12 md:pb-24 relative grow'>
                                         {contentData.map((cardData, idx) => (
                                             <ContentCard
                                                 key={idx}
