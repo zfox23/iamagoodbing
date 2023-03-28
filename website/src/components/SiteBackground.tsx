@@ -19,7 +19,7 @@ export const SiteBackground = ({ bgStyle, backgroundImageIdx = 0 }) => {
     return (
         <>
             <Transition
-                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'
+                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default pointer-events-none'
                 show={bgStyle === SiteBackgroundStyles.Images}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0"
@@ -36,7 +36,7 @@ export const SiteBackground = ({ bgStyle, backgroundImageIdx = 0 }) => {
             </Transition>
 
             <Transition
-                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default'
+                className='fixed -inset-4 text-slate-900/5 text-sm text-justify tracking-wide z-10 cursor-default pointer-events-none'
                 show={bgStyle === SiteBackgroundStyles.Words}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0"
