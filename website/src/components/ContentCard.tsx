@@ -27,8 +27,8 @@ export const ContentCard = ({ cardData }) => {
             </div>
             <div className='w-full flex-col items-center justify-start rounded-md shadow-md shadow-slate-900/20'>
                 <h2 className='w-full bg-fuchsia-700 rounded-t-md font-semibold text-xl p-3 text-center'><a href={`#${cardData.htmlID}`} className='hover:underline'>{cardData.title}</a></h2>
-                <div className={`bg-slate-50 w-full flex flex-row flex-wrap ${hasLinks ? "" : "rounded-b-md"}`}>
-                    <a className="inline-block max-h-[calc(100vh-180px)] w-full max-w-lg m-4 rounded-md relative overflow-clip cursor-zoom-in group shrink" href={cardData.image.src.publicURL} target="_blank" style={{ "height": `${cardData.image.preferredHeightPX}px` }}>
+                <div className={`bg-slate-50 w-full flex flex-row gap-4 p-4 flex-wrap ${hasLinks ? "" : "rounded-b-md"}`}>
+                    <a className="inline-block max-h-[calc(100vh-180px)] w-full md:max-w-lg rounded-md relative overflow-clip cursor-zoom-in group grow shrink" href={cardData.image.src.publicURL} target="_blank" style={{ "height": `${cardData.image.preferredHeightPX}px` }}>
                         <GatsbyImage
                             className={`!absolute inset-0 blur-lg scale-110 saturate-50 brightness-75 touch-none`}
                             image={getImage(cardData.image.src)!}
@@ -41,7 +41,7 @@ export const ContentCard = ({ cardData }) => {
                             alt={cardData.image.alt}
                         />
                     </a>
-                    <div className='w-md inline-block m-4 text-slate-900' dangerouslySetInnerHTML={html}>
+                    <div className='w-md inline-block text-slate-900' dangerouslySetInnerHTML={html}>
                     </div>
                 </div>
                 {
