@@ -26,7 +26,7 @@ const AboutPage = () => {
                         <p>In <span className='font-semibold'>😜 Silly Mode</span>, the background images you see were generated using <a href="https://en.wikipedia.org/wiki/Stable_Diffusion" target='_blank'><span className='underline'>Stable Diffusion</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>, an AI model used to create images from a text prompt. For example, the image below was generated using the text prompt "Utopia skyline, varied building heights, green parks, sunset, photorealistic":</p>
                         <StaticImage className='rounded-md w-full max-w-md' src="../content/backgroundImages/jpg/01377-3207551456-Utopia skyline, varied building heights, green parks, sunset, photorealistic.jpg" alt="Utopia skyline, varied building heights, green parks, sunset, photorealistic" />
 
-                        <p>In <span className='font-semibold'>🤨 Serious Mode</span>, the faint background text you may notice is a copy of <a href="#" target='_blank'><span className='underline'>&lt;INSERT FTC THING HERE&gt;</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>.</p>
+                        <p>In <span className='font-semibold'>🤨 Serious Mode</span>, the faint background text you may notice is a copy of <a href="https://www.ftc.gov/reports/combatting-online-harms-through-innovation" target='_blank'><span className='underline'>&lt;the 2022 FTC report to Congress: Combatting Online Harms Through Innovation&gt;</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>.</p>
                     </div>
 
                     <div className='space-y-4'>
