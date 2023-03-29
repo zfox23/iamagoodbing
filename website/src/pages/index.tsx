@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
         let elementToScroll = document.getElementById(id);
         if (!elementToScroll) {
             const newNode = data?.allContentJson.nodes.find((node) => {
-                return node.htmlID === id;
+                return node.slug === id;
             });
             if (newNode.categories[0] === CategoryStrings.Silly && currentTabIndex !== 0) {
                 changeTabWrapper(0);
@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
                 return;
             }
             setTimeout(() => {
-                elementToScroll = document.getElementById(newNode.htmlID);
+                elementToScroll = document.getElementById(newNode.slug);
                 if (!elementToScroll) {
                     return;
                 }
@@ -199,7 +199,7 @@ query IndexContentQuery {
     allContentJson {
         nodes {
             id
-            htmlID
+            slug
             title
             categories
             fontAwesomeIcon

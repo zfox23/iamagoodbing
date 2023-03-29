@@ -20,15 +20,15 @@ export const ContentCard = ({ cardData }) => {
     });
 
     return (
-        <div ref={containerRef} id={cardData.htmlID} className={`${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'} transition-{transform, opacity, scale} duration-500 flex flex-col items-center justify-start text-slate-50 w-full md:mb-24 break-words mb-12`}>
+        <div ref={containerRef} id={cardData.slug} className={`${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'} transition-{transform, opacity, scale} duration-500 flex flex-col items-center justify-start text-slate-50 w-full md:mb-24 break-words mb-12`}>
             <div className='flex flex-col items-center'>
                 <i className={`bg-fuchsia-700 rounded-t-md p-2 fa-solid fa-${cardData.fontAwesomeIcon || 'robot'}`}></i>
                 <h3 className='p-2 text-sm font-semibold bg-fuchsia-700 rounded-t-md shadow-md shadow-slate-900/20'>
-                    <a href={`#${cardData.htmlID}`} className='hover:underline' onClick={onClickHash}>{dateString}</a>
+                    <a href={`#${cardData.slug}`} className='hover:underline' onClick={onClickHash}>{dateString}</a>
                 </h3>
             </div>
             <div className='w-full flex-col items-center justify-start rounded-md shadow-md shadow-slate-900/20'>
-                <h2 className='w-full bg-fuchsia-700 bg-gradient-to-b from-fuchsia-700 to-fuchsia-800 rounded-t-md font-semibold text-xl p-3 text-center'><a href={`#${cardData.htmlID}`} className='hover:underline' onClick={onClickHash}>{cardData.title}</a></h2>
+                <h2 className='w-full bg-fuchsia-700 bg-gradient-to-b from-fuchsia-700 to-fuchsia-800 rounded-t-md font-semibold text-xl p-3 text-center'><a href={`#${cardData.slug}`} className='hover:underline' onClick={onClickHash}>{cardData.title}</a></h2>
                 <div className={`bg-slate-50 w-full flex flex-col gap-4 flex-wrap ${hasLinks ? "" : "rounded-b-md"}`}>
                     <a className="inline-block max-h-[calc(100vh-180px)] w-full relative overflow-clip cursor-zoom-in group mx-auto" href={cardData.image.src.publicURL} target="_blank" style={{ "height": `${cardData.image.preferredHeightPX}px` }}>
                         <GatsbyImage

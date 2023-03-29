@@ -1,6 +1,6 @@
 [
     {
-        "htmlID": "goodbing",
+        "slug": "goodbing",
         "title": "I have been a good Bing. 😊",
         "categories": ["silly"],
         "fontAwesomeIcon": "robot",
@@ -20,7 +20,7 @@
         ]
     },
     {
-        "htmlID": "enders",
+        "slug": "enders",
         "title": "Conversation Enders",
         "categories": ["serious"],
         "fontAwesomeIcon": "hands-praying",
@@ -34,7 +34,7 @@
         "contributor": "Liv"
     },
     {
-        "htmlID": "ftc-watching",
+        "slug": "ftc-watching",
         "title": "The FTC is Watching",
         "categories": ["serious"],
         "fontAwesomeIcon": "eye",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "htmlID": "cbs-generative-ai",
+        "slug": "cbs-generative-ai",
         "title": "Columbia Business School: \"Generative AI: A Lesson for Leaders to Exercise Caution\"",
         "categories": ["serious"],
         "fontAwesomeIcon": "school",
@@ -74,7 +74,7 @@
         ]
     },
     {
-        "htmlID": "im-here-to-learn-so",
+        "slug": "im-here-to-learn-so",
         "title": "im here to learn so :))))))",
         "categories": ["serious"],
         "fontAwesomeIcon": "comments",
