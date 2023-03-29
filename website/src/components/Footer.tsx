@@ -1,6 +1,8 @@
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { onClickHash } from './helpers/helpers';
 const isBrowser = typeof window !== "undefined";
 
 export const Footer = ({ }) => {
@@ -21,14 +23,14 @@ export const Footer = ({ }) => {
                 </script>
             </Helmet>
             <div className='flex flex-col items-center justify-center text-slate-50 p-3 gap-2'>
-                {isHome ? <a href="#top" className='hover:underline font-semibold text-xl'>Return to Top</a> : null}
+                {isHome ? <a href="#top" className='hover:underline font-semibold text-xl' onClick={onClickHash}>Return to Top</a> : null}
                 <div className='text-sm'>
                     <p><span>A project by </span>
-                        <a href="https://liverickson.com" target='_blank'><span className='underline'>Liv Erickson</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://liverickson.com" target='_blank'><span className='underline'>Liv Erickson</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>, </span>
-                        <a href="https://zachfox.photography" target='_blank'><span className='underline'>Zach Fox</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://zachfox.photography" target='_blank'><span className='underline'>Zach Fox</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>, and </span>
-                        <a href="https://github.com/zfox23/iamagoodbing" target='_blank'><span className='underline'>open-source contributors like you</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://github.com/zfox23/iamagoodbing" target='_blank'><span className='underline'>open-source contributors like you</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>.</span>
                     </p>
                 </div>

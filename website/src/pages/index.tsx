@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Layout } from "../components/Layout";
 import SEOHeader from "../components/SEOHeader";
 import { graphql } from 'gatsby';
@@ -7,10 +7,22 @@ import { Tab, Transition } from '@headlessui/react';
 import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
 import { useBackgroundImages } from '../hooks/useBackgroundImages';
 import { StaticImage } from 'gatsby-plugin-image';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import { useOnLoadImages } from '../hooks/useOnLoadImages';
+const isBrowser = typeof window !== "undefined";
+const TAB_CHANGE_TRANSITION_MS = 300;
+const TAB_CHANGE_TRANSITION_PADDING_MS = 200;
+
+enum CategoryStrings {
+    Silly = "silly",
+    Serious = "serious"
+}
 
 const IndexPage = ({ data }) => {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
     const [backgroundImageIdx, setBackgroundImageIdx] = useState(0);
+
+    const pageContainerRef = useRef<HTMLDivElement>(null);
 
     const backgroundImages = useBackgroundImages();
 
@@ -19,7 +31,7 @@ const IndexPage = ({ data }) => {
     }
 
     const silly = data?.allContentJson.nodes.filter((node) => {
-        return node.categories.includes("silly");
+        return node.categories.includes(CategoryStrings.Silly);
     }).sort((a, b) => {
         const aDate = new Date(a.datetimeISO);
         const bDate = new Date(b.datetimeISO);
@@ -28,7 +40,7 @@ const IndexPage = ({ data }) => {
     });
 
     const serious = data?.allContentJson.nodes.filter((node) => {
-        return node.categories.includes("serious");
+        return node.categories.includes(CategoryStrings.Serious);
     }).sort((a, b) => {
         const aDate = new Date(a.datetimeISO);
         const bDate = new Date(b.datetimeISO);
@@ -41,17 +53,60 @@ const IndexPage = ({ data }) => {
         "🤨 Serious": serious
     }
 
-    useEffect(() => {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    useOnLoadImages(pageContainerRef, () => {
+        if (!isBrowser) {
+            return;
+        }
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const { hash } = window.location;
+        if (!hash) {
+            return;
+        }
+        const id = hash.slice(1);
+
+        let elementToScroll = document.getElementById(id);
+        if (!elementToScroll) {
+            const newNode = data?.allContentJson.nodes.find((node) => {
+                return node.htmlID === id;
+            });
+            if (newNode.categories[0] === CategoryStrings.Silly && currentTabIndex !== 0) {
+                changeTabWrapper(0);
+            } else if (newNode.categories[0] === CategoryStrings.Serious && currentTabIndex !== 1) {
+                changeTabWrapper(1);
+            }
+            // If we've already found the element to scroll,
+            // don't use the timeout below to scroll to the element.
+            if (elementToScroll) {
+                return;
+            }
+            setTimeout(() => {
+                elementToScroll = document.getElementById(newNode.htmlID);
+                if (!elementToScroll) {
+                    return;
+                }
+                elementToScroll.scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
+            }, TAB_CHANGE_TRANSITION_MS + TAB_CHANGE_TRANSITION_PADDING_MS);
+        }
+        
+        if (!elementToScroll) {
+            return;
+        }
+
+        elementToScroll.scrollIntoView({
+            behavior: 'smooth'
         });
     });
+
+    const changeTabWrapper = (newIndex) => {
+        setCurrentTabIndex(newIndex);
+
+        if (newIndex === 0) {
+            const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
+            setBackgroundImageIdx(newBGImageIdx);
+        }
+    }
 
     return (
         <Layout>
@@ -69,27 +124,20 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className='bg-neutral-200 w-full p-2 rounded-b-md text-sm text-slate-900 text-center italic'>
                     <p><span>A project by </span>
-                        <a href="https://liverickson.com" target='_blank'><span className='underline'>Liv Erickson</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://liverickson.com" target='_blank'><span className='underline'>Liv Erickson</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>, </span>
-                        <a href="https://zachfox.photography" target='_blank'><span className='underline'>Zach Fox</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://zachfox.photography" target='_blank'><span className='underline'>Zach Fox</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>, and </span>
-                        <a href="https://github.com/zfox23/iamagoodbing" target='_blank'><span className='underline'>open-source contributors like you</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></a>
+                        <OutboundLink href="https://github.com/zfox23/iamagoodbing" target='_blank'><span className='underline'>open-source contributors like you</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>
                         <span>.</span>
                     </p>
                 </div>
             </div>
 
-            <div className="w-full z-20 max-w-5xl mb-48">
+            <div ref={pageContainerRef} className="w-full z-20 max-w-5xl mb-48">
                 <Tab.Group
                     selectedIndex={currentTabIndex}
-                    onChange={(newIndex) => {
-                        setCurrentTabIndex(newIndex);
-
-                        if (newIndex === 0) {
-                            const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
-                            setBackgroundImageIdx(newBGImageIdx);
-                        }
-                    }}
+                    onChange={changeTabWrapper}
                 >
                     <Tab.List className="flex space-x-4 p-4 rounded-t-md bg-fuchsia-900/95">
                         {Object.keys(categories).map((category) => (
@@ -121,7 +169,7 @@ const IndexPage = ({ data }) => {
                                 <Transition
                                     show={currentTabIndex === idx}
                                     className='z-20 relative'
-                                    enter="ease-out duration-300"
+                                    enter={`ease-out duration-${TAB_CHANGE_TRANSITION_MS.toString()}`}
                                     enterFrom="opacity-0"
                                     enterTo="opacity-100"
                                     leave="linear duration-0"

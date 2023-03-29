@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export const useElementOnScreen = ({ observerOptions, sticky = false, onVisibleChanged = (newlyVisible) => {} }) => {
+export const useElementOnScreen = ({ observerOptions, sticky = false, onVisibleChanged = (newlyVisible, target) => {} }) => {
     const containerRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -13,7 +13,7 @@ export const useElementOnScreen = ({ observerOptions, sticky = false, onVisibleC
         }
 
         if (isVisible !== entry.isIntersecting) {
-            onVisibleChanged(entry.isIntersecting);
+            onVisibleChanged(entry.isIntersecting, containerRef.current);
         }
     }
 
