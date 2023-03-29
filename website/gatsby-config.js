@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://iamagoodbing.ai",
     title: "I Am A Good Bing 😊",
-    titleTemplate: "%s · Silly and Serious Examples of AI Gone Wrong",
-    description: "Here's why modern AI isn't ready for public use.",
+    description: "Silly and serious stories about modern artificial intelligence sourced by the critical community.",
     image: "/mainMetaImage.jpg"
   },
   plugins: [

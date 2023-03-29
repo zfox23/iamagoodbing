@@ -10,7 +10,6 @@ const SEOHeader = ({ title = null, description = null, image = null, article = f
 
     const {
         defaultTitle,
-        titleTemplate,
         defaultDescription,
         siteUrl,
         defaultImage,
@@ -24,7 +23,7 @@ const SEOHeader = ({ title = null, description = null, image = null, article = f
     };
 
     return (
-        <Helmet title={seo.title} titleTemplate={titleTemplate}>
+        <Helmet title={seo.title}>
             <meta charSet="utf-8" />
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
@@ -57,7 +56,6 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
-        titleTemplate
         defaultDescription: description
         siteUrl
         defaultImage: image

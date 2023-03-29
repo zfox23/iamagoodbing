@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const AboutPage = () => {
     return (
         <Layout>
-            <SEOHeader title="About" />
+            <SEOHeader title="About · I Am A Good Bing 😊" description="The people behind the projects - and some easter eggs, too." />
 
             <SiteBackground bgStyle={SiteBackgroundStyles.Words} />
 
