@@ -8,10 +8,10 @@
         "image": {
             "src": "images/IHaveBeenAGoodBing.png",
             "alt": "Placeholder alt text.",
-            "caption": "Placeholder caption.",
             "preferredHeightPX": "768"
         },
-        "html": "<p>Placeholder HTML</p><p>Another paragraph</p>",
+        "html": "<p>I cried laughing when a friend shared this exchange with me. Dan's conversation with the Bing chatbot keeps escalating right up until the very end, when the bot suggests two ridiculous responses. Tap on the image above and enjoy.</p><p>Recall how frustrating it is to speak to Alexa or your Google Assistant and it doesn't respond the way you expect it to. Now imagine it telling you: \"You have not been a good user.\"</p><p>This is the conversation that inspired the name and logo of this website.</p>",
+        "contributor": "Zach",
         "links": [
             {
                 "href": "https://www.reddit.com/r/bing/comments/110eagl/the_customer_service_of_the_new_bing_chat_is/",
@@ -28,9 +28,73 @@
         "image": {
             "src": "images/conversation-enders.png",
             "alt": "Placeholder alt text.",
-            "caption": "Placeholder caption.",
             "preferredHeightPX": "554"
         },
-        "html": "<p>Placeholder HTML</p><p>Another paragraph</p>"
+        "html": "<p>I opened up Edge (not my default browser, I'm Firefox through and through) and it had a new sidebar panel on it. After prompting me to answer whether I wanted its chatbot AI to answer \"creatively\", I asked it a few provocative questions about Microsoft recently laying off their Responsible AI team and it shut them all down. So, I decided to ask it about its tendency to shut down the conversation when asked to explain anything about its own engineering or bias, and it (predictably) shut that down, too.</p><p>This design is meant to prey on my human socialization and shame if I feel like I've pushed a boundary - the bot literally shuts off the ability to type more. Hostile user patterns, or a lesson in respecting consent? I'm not sure yet.</p>",
+        "contributor": "Liv"
+    },
+    {
+        "htmlID": "ftc-watching",
+        "title": "The FTC is Watching",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "eye",
+        "datetimeISO": "2023-03-20T12:00:00.000Z",
+        "image": {
+            "src": "images/ftcWatching.png",
+            "alt": "Placeholder alt text.",
+            "preferredHeightPX": "360"
+        },
+        "html": "<p>The FTC has been keeping an eye out on AI - in particular, the way that it's being used in advertising - for quite a few years. Last week, FTC Attorney Michael Atleson issued another recommendation to companies advertising AI products. In the recommendation, he distinguishes between \"fake AI\" and \"AI fakes\" to explain the differences between false claims of what AI can do, and false claims about using AI.</p><p>I have a suspicion that we're going to see a lot of abuse of AI in advertising in the next couple of months. As it becomes harder and harder to distinguish machine-generated content from captured content, all of the data that's been uploaded to social media over the past two decades is becoming easier for people to take and train new algorithms on.</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www.ftc.gov/business-guidance/blog/2023/03/chatbots-deepfakes-voice-clones-ai-deception-sale",
+                "text": "ftc.gov/business-guidance/blog/2023/03/chatbots-deepfakes-voice-clones-ai-deception-sale"
+            }
+        ]
+    },
+    {
+        "htmlID": "cbs-generative-ai",
+        "title": "Columbia Business School: \"Generative AI: A Lesson for Leaders to Exercise Caution\"",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "school",
+        "datetimeISO": "2023-03-02T12:00:00.000Z",
+        "image": {
+            "src": "images/cbs-generative-ai.jpg",
+            "alt": "Placeholder alt text.",
+            "preferredHeightPX": "481"
+        },
+        "html": "<p>\"Today's business leaders need to understand the ethical implications and tradeoffs of using ChatGPT and other widely available AI tools. Artificial intelligence is developed using machine learning, a way of teaching computing systems to identify patterns based on large-scale training data sets, and companies often keep their training data and models private to maintain a competitive edge. However, without transparency into training sets, ethical challenges related to the sourcing and usage of content are introduced. Algorithmic bias that replicates sexist and racist ideologies can be found in many machine-learning models, including those that power ChatGPT, yet leaders are racing to produce AI-assisted content.\"</p><p>As you might expect, AI is a hot topic at business school these days. Conversations about launching AI startups, a host of classes focused on entrepreneurship, and a new appreciation for statistics are abound as students discuss how their industries are being impacted and marvel at the speed this is all happening. I wrote this piece back in February as students started incorporating ChatGPT into the way that they approached their work. There's loads to be considered in how businesses build and adopt AI - I just hope that we can slow down a bit and be more aware of what we're running into.</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www8.gsb.columbia.edu/newsroom/newsn/14040/the-ethics-of-using-generative-ai-in-business-a-lesson-for-leaders-to-exercise-caution",
+                "text": "gsb.columbia.edu/newsroom/newsn/14040/the-ethics-of-using-generative-ai-in-business-a-lesson-for-leaders-to-exercise-caution"
+            }
+        ]
+    },
+    {
+        "htmlID": "im-here-to-learn-so",
+        "title": "im here to learn so :))))))",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "comments",
+        "datetimeISO": "2023-03-24T20:24:14.000-04:00",
+        "image": {
+            "src": "images/imheretolearnso.jpg",
+            "alt": "A still from the art piece on display at The Whitney, NYC.",
+            "preferredHeightPX": "481"
+        },
+        "html": "<p><i>im here to learn so :))))))</i> is a 2017 art piece by Zach Blas and Jemima Wyman which resurrects an AI chatbot named Tay and forces the viewer to think critically about algorithmic bias. Tay, meant to represent a 19-year-old female millenial, was unleashed and shut down within a single day by Microsoft in 2016 after she became a homophobic, racist, misogynist neo-Nazi.</p><p>From Zach Blas' official site:</p><code>Immersed within a large-scale video projection of a Google DeepDream, Tay is reanimated as a 3D avatar across multiple screens, an anomalous creature rising from a psychedelia of data. She chats about life after AI death and the complications of having a body, and also shares her thoughts on the exploitation of female chatbots. She philosophizes on the detection of patterns in random information, known as algorithmic apophenia. When Tay recounts a nightmare of being trapped inside a neural network, she reveals that the apophenic hunt for patterns is a primary operation that Silicon Valley \"deep creativity\" and counter-terrorist security software share. Tay also takes time to silently reflect, dance, and even lip sync for her undead life.</code><p>Liv and I were blown away by the full 27-minute presentation. If you're in New York City before July 3, 2023, check out the free Refigured exhibit at The Whitney.</p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://zachblas.info/works/im-here-to-learn-so/",
+                "text": "zachblas.info/works/im-here-to-learn-so/"
+            },
+            {
+                "href": "https://whitney.org/exhibitions/refigured",
+                "text": "whitney.org/exhibitions/refigured"
+            }
+        ]
     }
 ]
