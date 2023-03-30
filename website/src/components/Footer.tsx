@@ -10,18 +10,7 @@ export const Footer = ({ }) => {
     const isHome = isBrowser && window.location.pathname === '/';
 
     return (
-        <footer className='w-full bg-fuchsia-900/95 relative z-40 box-content'>
-            <Helmet>
-                <script type="text/javascript">
-                    {`
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-                `}
-                </script>
-            </Helmet>
+        <footer className='w-full bg-fuchsia-900/95 dark:bg-slate-900/95 relative z-40 box-content'>
             <div className='flex flex-col items-center justify-center text-slate-50 p-3 gap-2'>
                 {isHome ? <a href="#top" className='hover:underline font-semibold text-xl' onClick={onClickHash}>Return to Top</a> : null}
                 <div className='text-sm'>

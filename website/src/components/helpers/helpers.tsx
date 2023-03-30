@@ -13,3 +13,11 @@ export const onClickHash = (e) => {
     });
     history.replaceState({}, '', e.target.href);
 }
+
+export const setTheme = (switchToDarkTheme) => {
+    if (switchToDarkTheme) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+}

@@ -6,14 +6,16 @@ import { ContentCard } from '../components/ContentCard';
 import { Transition } from '@headlessui/react';
 import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
 import { useBackgroundImages } from '../hooks/useBackgroundImages';
+import { setTheme } from '../components/helpers/helpers';
 const TAB_CHANGE_TRANSITION_MS = 300;
 
 
 const ContentPage = ({ data }) => {
     const { contentJson } = data;
-    console.log(contentJson)
     const backgroundImages = useBackgroundImages();
     const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
+
+    setTheme(contentJson.categories.includes("serious"));
 
     return (
         <Layout>
@@ -22,7 +24,7 @@ const ContentPage = ({ data }) => {
             <SiteBackground backgroundImageIdx={newBGImageIdx} bgStyle={contentJson.categories.includes("silly") === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
             <div className="w-full z-20 max-w-5xl mb-48">
-                <div className="flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-fuchsia-50/80 rounded-b-md border-b-4 border-fuchsia-900/95">
+                <div className={`flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-fuchsia-50/80 dark:bg-slate-50/80 rounded-b-md border-b-4 border-fuchsia-900/95 dark:border-slate-900/95`}>
                     <div
                         className={`relative grow w-full ${contentJson.categories.includes("silly") ? "font-comicsans" : 'font-arial'}`}
                     >
