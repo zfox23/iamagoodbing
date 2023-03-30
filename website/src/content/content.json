@@ -133,5 +133,25 @@
                 "text": "liverickson.com/blog/?p=191"
             }
         ]
+    },
+    {
+        "slug": "northernlion-marchuary",
+        "title": "Northernlion on \"ChatGPT-4\"",
+        "categories": ["silly"],
+        "fontAwesomeIcon": "comment",
+        "datetimeISO": "2023-03-30T01:12:01.429Z",
+        "image": {
+            "src": "images/northernlion-icon.jpg",
+            "alt": "Northernlion's avatar.",
+            "preferredHeightPX": "176"
+        },
+        "html": "<iframe class='mx-auto max-w-full' width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WxuOm91Pc-M?start=1283\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe><p class='italic'>While playing Super Auto Pets:</p><p class='italic'>&gt; Lemme be, um...we have an Overexcited Programmer.</p><p class='italic'>&gt; Like people saying that ChatGPT-4 has already put people out of a job, and then you ask ChatGPT-4 \"What month comes after February?\" and it says \"Marchuary\".</p><p class='italic'>&gt; Anyway, listen, I'm not knocking it. For all I know, it could take my job one day.</p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://www.youtube.com/watch?v=WxuOm91Pc-M&t=1283s",
+                "text": "Northernlion on YouTube: \"You know I had to do it to em (Super Auto Pets)\" @ 21:23"
+            }
+        ]
     }
 ]

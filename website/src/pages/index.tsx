@@ -36,22 +36,17 @@ const IndexPage = ({ data }) => {
         return classes.filter(Boolean).join(' ')
     }
 
-    const silly = data?.allContentJson.nodes.filter((node) => {
-        return node.categories.includes(CategoryStrings.Silly);
-    }).sort((a, b) => {
+    const allData = data?.allContentJson.nodes.sort((a, b) => {
         const aDate = new Date(a.datetimeISO);
         const bDate = new Date(b.datetimeISO);
-
-        return aDate < bDate;
+        return aDate.getTime() < bDate.getTime();
     });
 
-    const serious = data?.allContentJson.nodes.filter((node) => {
+    const silly = allData.filter((node) => {
+        return node.categories.includes(CategoryStrings.Silly);
+    });
+    const serious = allData.filter((node) => {
         return node.categories.includes(CategoryStrings.Serious);
-    }).sort((a, b) => {
-        const aDate = new Date(a.datetimeISO);
-        const bDate = new Date(b.datetimeISO);
-
-        return aDate < bDate;
     });
 
     const categories = {
@@ -80,7 +75,7 @@ const IndexPage = ({ data }) => {
 
         let elementToScroll = document.getElementById(id);
         if (!elementToScroll) {
-            const newNode = data?.allContentJson.nodes.find((node) => {
+            const newNode = allData.find((node) => {
                 return node.slug === id;
             });
             if (newNode.categories[0] === CategoryStrings.Silly && currentTabIndex !== 0) {
@@ -212,11 +207,13 @@ const IndexPage = ({ data }) => {
                                     leaveFrom="opacity-100"
                                     leaveTo="opacity-0">
                                     <div className='py-8 md:py-16 pb-12 md:pb-24 relative grow'>
-                                        {contentData.map((cardData, idx) => (
-                                            <ContentCard
-                                                key={idx}
-                                                cardData={cardData} />
-                                        ))}
+                                        {contentData.map((cardData, idx) => {
+                                            return (
+                                                <ContentCard
+                                                    key={idx}
+                                                    cardData={cardData} />
+                                            )
+                                        })}
                                     </div>
                                 </Transition>
                             </Tab.Panel>

@@ -80,9 +80,14 @@ module.exports = {
                 return Object.assign({}, {
                   title: node.title,
                   date: node.datetimeISO,
+                  author: node.contributor,
                   url: `${site.siteMetadata.siteUrl}/${node.slug}`,
                   guid: `${site.siteMetadata.siteUrl}/${node.slug}`,
                   custom_elements: [{ "content:encoded": node.html }],
+                  enclosure: {
+                    'url': `${site.siteMetadata.siteUrl}${node.image.src.publicURL}`,
+                    'type' : 'image/jpeg'
+                  }
                 })
               })
             },
