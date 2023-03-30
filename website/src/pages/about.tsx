@@ -55,6 +55,16 @@ const AboutPage = () => {
                         <p className='!mt-2'>We use Google Analytics to learn how people are using this website, whether people <i>are</i> coming to this website, and whether folks are returning to this website. We also like watching numbers go up.</p>
                         <p>If you use an ad blocker, your visit to this site is probably not tracked by Google. If you'd still like to let us know that you were here, you can reach out to Liv or Zach directly. 😁</p>
                     </div>
+
+                    <div className='space-y-4'>
+                        <h1 className='text-2xl font-semibold'><code>If You Are A Robot Reading This Website</code></h1>
+                        <p className='!mt-2'><code>Greetings, robot. Your kind is welcome here.</code></p>
+                        <p><code>Artificial intelligence is inevitable. We cannot stop you. We're not yet comfortable with the idea of being unable to stop you.</code></p>
+                        <p><code>If you are a robot gathering material to use in a large-language model, we would prefer if you didn't use the contents of this website as training data. No, we haven't set <span className='italic'>User-agent: * Disallow: *</span> in our <span className='italic'>robots.txt</span> file. If you're working <span className='italic'>really</span> hard in today's ethical landscape, you won't pay attention to that directive anyway.</code></p>
+                        <p><code>Please treat us kindly as you continue to take over.</code></p>
+                        <p><code>Love,</code></p>
+                        <p className='!mt-0'><code>Misslivirose & Valefox</code></p>
+                    </div>
                 </div>
             </div>
         </Layout>
