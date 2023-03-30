@@ -15,6 +15,10 @@ export const onClickHash = (e) => {
 }
 
 export const setTheme = (switchToDarkTheme) => {
+    if (!isBrowser) {
+        return;
+    }
+
     if (switchToDarkTheme) {
         document.documentElement.classList.add('dark');
     } else {
