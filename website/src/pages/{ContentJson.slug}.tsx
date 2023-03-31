@@ -17,20 +17,13 @@ const ContentPage = ({ data }) => {
     const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
 
     setTheme(contentJson.categories.includes("serious"));
+    
     return (
         <Layout>
-            <SEOHeader title={`${contentJson.title} · I Am A Good Bing 😊`} />
+            <SEOHeader title={contentJson.title} description="Read this story on I Am A Good Bing 😊 - A place for content about modern artificial intelligence sourced by the critical community." image={contentJson.iamge.src.publicURL} />
 
             <SiteBackground backgroundImageIdx={newBGImageIdx} bgStyle={contentJson.categories.includes("silly") === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
-            {/* <div id='top' className={`flex flex-col w-full max-w-6xl z-20 rounded-b-md pt-16 mb-6 md:mb-12 bg-gradient-to-br from-fuchsia-100/95 dark:from-slate-100/95 to-fuchsia-200/95 dark:to-slate-200/95 bg-fuchsia-100/95 dark:bg-slate-100/95 shadow-md shadow-slate-900/20`}>
-                <div className='flex flex-row flex-wrap gap-6 items-center justify-start pb-4 px-4 md:px-8 rounded-b-md w-full z-20 text-slate-900'>
-                    <Link to="/" className='flex items-center'>
-                        <StaticImage height={64} quality={100} src="../images/logo-tight.png" alt="The site logo is a smiling face emoji inside a laptop emoji. The laptop emoji is on fire." />
-                        <p className='ml-2 text-xl font-semibold'>IAAGB</p>
-                    </Link>
-                </div>
-            </div> */}
             <Breadcrumbs
                     data={[{ title: "All Stories", url: "/" }, { title: contentJson.title, url: `/${contentJson.slug}` }]}
                 />
