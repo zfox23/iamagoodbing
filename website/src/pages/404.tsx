@@ -17,7 +17,7 @@ const IndexPage = () => {
                         <h1 className='text-6xl font-bold'>404</h1>
                         <h2>Page Not Found</h2>
                     </div>
-                    <Link className='px-2 hover:underline text-3xl' to='/'>Return Home</Link>
+                    <Link className='px-2 hover:underline text-3xl' to='/'>Return Home 😊</Link>
                 </div>
             </div>
         </Layout>

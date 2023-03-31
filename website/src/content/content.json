@@ -1,5 +1,29 @@
 [
     {
+        "slug": "chat-gpt-banned-italy",
+        "title": "ChatGPT Banned in Italy",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "gavel",
+        "datetimeISO": "2023-03-31T16:51:18.540Z",
+        "image": {
+            "src": "images/microsoft-italy-market-cap.png",
+            "alt": "A graph of Microsoft's market cap above a graph of Italy's gross demestic product.",
+            "preferredHeightPX": "920"
+        },
+        "html": "<p>As the questions around regulation of large language models continue to grow, Italy has decided to take a stand and become the first Western country to ban the software. Citing concerns about data protection and compliance with GDPR, Italy has given Open AI a limited amount of time to answer questions about how the service is complying with the existing consumer privacy laws that attempt to keep up with the rapid pace of software development. It's an admirable, but challenging, situation for Italy to be in.</p><p>Unless other Western countries follow suit, it may be hard to imagine Italy being successful here. Germany and France have (at least historically) tended to be the major powerhouses in data regulation within the EU. Plus, there's also the fact that Italy's entire GDP is just $2.1 T USD, - coincidentally, the same value as Microsoft's current market cap. When we think about how much power tech companies working on AI truly have, it's important to contextualize them.</p><p>Macron has his hands full with the controversies around raising the retirement age in France right now, and Germany's first goal with their AI policy is to maintain competitiveness in the AI sector - so I'll be surprised if we see an immediate ban from other EU members immediately following this action from Italy. But, I think we're just one really bad ChatGPT-based controversy away from an abrupt disruption, so we'll see where this goes.</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www.bbc.com/news/technology-65139406",
+                "text": "BBC.com: ChatGPT banned in Italy over privacy concerns"
+            },
+            {
+                "href": "https://oecd.ai/en/wonk/germany-takes-an-inclusive-and-evidence-based-approach-for-capacity-building-and-a-human-centred-use-of-ai",
+                "text": "OCED.AI Policy Observatory: Germany’s human-centred approach to AI is inclusive, evidence-based and capacity-building"
+            }
+        ]
+    },
+    {
         "slug": "goodbing",
         "title": "I have been a good Bing. 😊",
         "categories": ["silly"],
