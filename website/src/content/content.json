@@ -1,5 +1,30 @@
 [
     {
+        "slug": "ftc-complaint-against-openai-01",
+        "title": "Center for AI and Digital Policy Files Formal FTC Complaint against OpenAI",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "file-pdf",
+        "datetimeISO": "2023-04-01T14:38:26.768Z",
+        "image": {
+            "src": "images/01412-3558010278-Center for AI and Digital Policy header image.png",
+            "caption": "\"Center for AI and Digital Policy header image\" generated using Stable Diffusion v1.5",
+            "alt": "Several white buildings that look like they belong in Washington DC at night with a blue circular logo in the middle.",
+            "preferredHeightPX": "448"
+        },
+        "html": "<h3 class='font-semibold text-xl'>No joking around in this 46 page call to investigate Open AI</h3><p>Yesterday, US-based Tech Ethics Policy group 'Center for AI and Digital Policy Group' (CAIDP) formally launched a 46-page complaint to the FTC with a request to investigate Microsoft-backed OpenAI. The opening statement of their case gets right to their perspective: that OpenAI's ChatGPT is \"deceptive, biased, and a risk to private and public safety.\" I agree, and will always take this as an opportunity to remind people that OpenAI is <i>not</i> an open company.</p><p>The 46-page case starts by explaining the jurisdiction that the FTC has and an overview on the products that OpenAI has released in market. The argument's framing for the ethical concerns includes evidence submitted about the US Government's participation in the OECD's AI principles and UGAI's framework on the intersection of AI and human rights. CAIDP also helpfully reminds the reader that Sam Altman is also running projects to scan everyone's eyes to create a permanent world-wide identity system, which should scare all of us.</p><p>Starting on page 8, you can read a long list of the harms that ChatGPT offers, including some truly horrific child safety allegations that should have alone caused any reasonable person to put a halt to further public availability of the technology. Unfortunately, Silicon Valley wealth has resulted in a new \"too big to fail\" mindset that pushes the idea of inevitability on their technological advancements, and many people associated with OpenAI have (essentially) decided that it's okay to harm people <i>today</i> if it means that they can secure their own wealth and security in the future. The link between the aggressive messaging around the inevitability of AI and the mindset of \"longtermism\" is increasingly important to call out. This isn't happening in a vacuum, and the solution is collective community care.</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www.caidp.org/app/download/8450182663/PRESS-CAIDP-OpenAI-FTC-Complaint.pdf?t=1680174583",
+                "text": "The Center for AI and Digital Policy: CAIDP Files Formal Complaint with FTC, Urging Investigation of OpenAI and Suspension of Large Language Model Sales, Including GPT-4"
+            },
+            {
+                "href": "https://www.caidp.org/app/download/8450269463/CAIDP-FTC-Complaint-OpenAI-GPT-033023.pdf?t=1680298572",
+                "text": "The Center for AI and Digital Policy: Full Complaint \"In the matter of OpenAI, Inc.\""
+            }
+        ]
+    },
+    {
         "slug": "bing-chat-tech-policy-advocate-roleplay",
         "title": "Bing Chat Won't Roleplay as a Tech Policy Advocate",
         "categories": ["silly"],

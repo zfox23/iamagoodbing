@@ -81,7 +81,7 @@ export const ContentCard = ({ cardData, unreadStories = [], setUnreadStories = (
                     <div className='text-slate-900 space-y-4 px-4 mb-4 w-full mt-4'>
                         <div className='w-full space-y-4' dangerouslySetInnerHTML={html}>
                         </div>
-                        <p className='italic text-sm'>Contributed By: {cardData.contributor || "Anonymous"}</p>
+                        <p className='italic text-sm'>Contributed by {cardData.contributor || "Anonymous"}</p>
                     </div>
                 </div>
                 {
