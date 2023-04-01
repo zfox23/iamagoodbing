@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Layout } from "../components/Layout";
 import SEOHeader from "../components/SEOHeader";
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { ContentCard } from '../components/ContentCard';
 import { Switch, Tab, Transition } from '@headlessui/react';
 import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
@@ -22,6 +22,7 @@ enum CategoryStrings {
 const IndexPage = ({ data }) => {
     const [currentTabIndex, setCurrentTabIndex] = useState(1);
     const [backgroundImageIdx, setBackgroundImageIdx] = useState(0);
+    const [unreadStories, setUnreadStories] = useState<string[]>([]);
 
     setTheme(currentTabIndex === 1);
     if (isBrowser && !window.location.hash) {
@@ -42,6 +43,22 @@ const IndexPage = ({ data }) => {
         return aDate.getTime() < bDate.getTime();
     });
 
+    useEffect(() => {
+        if (!isBrowser) {
+            return;
+        }
+
+        let newUnreadStories: string[] = [];
+        for (let i = 0; i < allData.length; i++) {
+            const slug: string = allData[i].slug;
+            if (localStorage.getItem(slug) !== "read") {
+                newUnreadStories.push(slug);
+            }
+        }
+
+        setUnreadStories(newUnreadStories);
+    }, [])
+
     const silly = allData.filter((node) => {
         return node.categories.includes(CategoryStrings.Silly);
     });
@@ -54,17 +71,7 @@ const IndexPage = ({ data }) => {
         "🤨 Serious": serious
     }
 
-    useOnLoadImages(pageContainerRef, () => {
-        if (!isBrowser) {
-            return;
-        }
-
-        const { hash } = window.location;
-        if (!hash) {
-            return;
-        }
-        const id = hash.slice(1);
-
+    const scrollToID = (id) => {
         if (id === "silly") {
             changeTabWrapper(0, true);
             return;
@@ -78,6 +85,10 @@ const IndexPage = ({ data }) => {
             const newNode = allData.find((node) => {
                 return node.slug === id;
             });
+            if (!newNode) {
+                return;
+            }
+
             if (newNode.categories[0] === CategoryStrings.Silly && currentTabIndex !== 0) {
                 changeTabWrapper(0, false);
             } else if (newNode.categories[0] === CategoryStrings.Serious && currentTabIndex !== 1) {
@@ -106,6 +117,20 @@ const IndexPage = ({ data }) => {
         elementToScroll.scrollIntoView({
             behavior: 'smooth'
         });
+    }
+
+    useOnLoadImages(pageContainerRef, () => {
+        if (!isBrowser) {
+            return;
+        }
+
+        const { hash } = window.location;
+        if (!hash) {
+            return;
+        }
+        const id = hash.slice(1);
+
+        scrollToID(id);
     });
 
     const changeTabWrapper = (newIndex, setHash) => {
@@ -125,14 +150,14 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEOHeader title="I Am A Good Bing 😊" />
+            <SEOHeader title={`${unreadStories.length > 0 ? `(${unreadStories.length}) ` : ""}I Am A Good Bing 😊`} />
 
             <SiteBackground backgroundImageIdx={backgroundImageIdx} bgStyle={currentTabIndex === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
             <div id='top' className={`flex flex-col w-full max-w-6xl z-20 rounded-b-md pt-16 mb-6 md:mb-12 bg-gradient-to-br from-fuchsia-100/95 dark:from-slate-100/95 to-fuchsia-200/95 dark:to-slate-200/95 bg-fuchsia-100/95 dark:bg-slate-100/95 shadow-md shadow-slate-900/20`}>
-                <div className='flex flex-row flex-wrap gap-6 items-center justify-center pb-4 px-4 md:px-8 rounded-b-md w-full z-20 text-slate-900'>
+                <div className={`flex flex-row flex-wrap gap-6 ${unreadStories.length > 0 ? 'items-end' : 'items-center'} justify-center pb-4 px-4 md:px-8 rounded-b-md w-full z-20 text-slate-900`}>
                     <StaticImage height={256} quality={100} src="../images/logo-tight.png" alt="The site logo is a smiling face emoji inside a laptop emoji. The laptop emoji is on fire." />
-                    <div className='md:text-left flex flex-col items-center md:items-start'>
+                    <div className='md:text-left flex flex-col items-center md:items-start relative'>
                         <h1 className='text-4xl font-bold mb-4'>I am a good Bing.</h1>
                         <h2 className='mb-0'><Switch.Group>
                             <div className={`flex items-center text-slate-900 mx-auto`}>
@@ -150,6 +175,13 @@ const IndexPage = ({ data }) => {
                             </div>
                         </Switch.Group> stories about modern artificial intelligence.</h2>
 
+                        {unreadStories.length > 0 ?
+                            <div className='bg-red-600/10 p-4 rounded-md mt-2'>
+                                <h3 className='text-xl font-semibold'>You have {unreadStories.length} unread {unreadStories.length === 1 ? "story" : "stories"}.</h3>
+                                <a href={`#${unreadStories[0]}`} className='text-md underline' onClick={(e) => {e.preventDefault(); scrollToID(unreadStories[0]); history.replaceState({}, '', `/#${unreadStories[0]}`);}}>View the latest.</a>
+                            </div>
+                            : null}
+
                     </div>
                 </div>
                 <div className='bg-neutral-200 w-full p-2 rounded-b-md text-sm text-slate-900 text-center italic'>
@@ -164,7 +196,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
-            <div ref={pageContainerRef} className="w-full z-20 max-w-5xl mb-48">
+            <div ref={pageContainerRef} className="w-full z-20 max-w-6xl mb-48">
                 <Tab.Group
                     selectedIndex={currentTabIndex}
                     onChange={(e) => { changeTabWrapper(e, true); }}
@@ -189,7 +221,7 @@ const IndexPage = ({ data }) => {
                             </Tab>
                         ))}
                     </Tab.List>
-                    <Tab.Panels className={`flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-fuchsia-50/80 dark:bg-slate-50/80 rounded-b-md border-b-4 border-fuchsia-900/95 dark:border-slate-900/95`}>
+                    <Tab.Panels className={`flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-36 mb-4 bg-fuchsia-50/80 dark:bg-slate-800/80 rounded-b-md border-b-4 border-fuchsia-900/95 dark:border-slate-900/95`}>
                         {Object.values(categories).map((contentData, idx) => (
                             <Tab.Panel
                                 key={idx}
@@ -211,7 +243,9 @@ const IndexPage = ({ data }) => {
                                             return (
                                                 <ContentCard
                                                     key={idx}
-                                                    cardData={cardData} />
+                                                    cardData={cardData}
+                                                    unreadStories={unreadStories}
+                                                    setUnreadStories={setUnreadStories} />
                                             )
                                         })}
                                     </div>

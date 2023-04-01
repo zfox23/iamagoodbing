@@ -36,7 +36,7 @@ export const SiteBackground = ({ bgStyle, backgroundImageIdx = 0 }) => {
             </Transition>
 
             <Transition
-                className='fixed inset-0 text-slate-900/5 text-sm space-y-2 text-justify tracking-wider z-10 cursor-default pointer-events-none'
+                className='fixed inset-0 bg-neutral-300 text-slate-50/5 text-sm space-y-2 text-justify tracking-wider z-10 cursor-default pointer-events-none'
                 show={bgStyle === SiteBackgroundStyles.Words}
                 enter="ease-out duration-300"
                 enterFrom="opacity-0"

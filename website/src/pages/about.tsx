@@ -24,6 +24,12 @@ const AboutPage = () => {
                     </div>
 
                     <div className='space-y-4'>
+                        <h1 className='text-2xl font-semibold mb-4'><Link to="/changelog" className='underline'>Changelog</Link></h1>
+                        <p>Software changelogs are neat.</p>
+                        <Link to="/changelog" className='underline'>If you want to see the features we've added and bugs we've fixed in an organized fashion, click here.</Link>
+                    </div>
+
+                    <div className='space-y-4'>
                         <h1 className='text-2xl font-semibold'>Meta Image</h1>
                         <p>In March 2016, <OutboundLink href="https://en.wikipedia.org/wiki/Tay_(chatbot)" target='_blank'><span className='underline'>Microsoft launched an AI chatbot on Twitter named Tay</span><i className='ml-1 fa-solid fa-sm fa-arrow-up-right-from-square'></i></OutboundLink>. After a single day, Microsoft was forced to shut Tay down after it began tweeting racist and sexually-charged messages.</p>
                         <p>The background of the meta image used for this website is a Gaussian-blurred version of Tay's Twitter profile picture:</p>

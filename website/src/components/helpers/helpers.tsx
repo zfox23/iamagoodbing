@@ -1,5 +1,3 @@
-const isBrowser = typeof window !== "undefined";
-
 export const onClickHash = (e) => {
     if (!(isBrowser && e)) {
         return;
@@ -25,3 +23,5 @@ export const setTheme = (switchToDarkTheme) => {
         document.documentElement.classList.remove('dark');
     }
 }
+
+export const isBrowser = typeof window !== "undefined";

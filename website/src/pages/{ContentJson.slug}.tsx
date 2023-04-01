@@ -6,7 +6,7 @@ import { ContentCard } from '../components/ContentCard';
 import { Transition } from '@headlessui/react';
 import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
 import { useBackgroundImages } from '../hooks/useBackgroundImages';
-import { setTheme } from '../components/helpers/helpers';
+import { isBrowser, setTheme } from '../components/helpers/helpers';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 const TAB_CHANGE_TRANSITION_MS = 300;
@@ -18,6 +18,20 @@ const ContentPage = ({ data }) => {
 
     setTheme(contentJson.categories.includes("serious"));
 
+    const [unreadStories, setUnreadStories] = useState<string[]>([]);
+    useEffect(() => {
+        if (!isBrowser) {
+            return;
+        }
+
+        let newUnreadStories: string[] = [];
+        const slug: string = contentJson.slug;
+        if (localStorage.getItem(slug) !== "read") {
+            newUnreadStories.push(slug);
+        }
+        setUnreadStories(newUnreadStories);
+    }, [])
+
     return (
         <Layout>
             <SEOHeader title={contentJson.title} description="Read this story on I Am A Good Bing 😊 - A place for content about modern artificial intelligence sourced by the critical community." image={contentJson.image.src.publicURL} />
@@ -25,11 +39,11 @@ const ContentPage = ({ data }) => {
             <SiteBackground backgroundImageIdx={newBGImageIdx} bgStyle={contentJson.categories.includes("silly") === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
             <Breadcrumbs
-                    data={[{ title: "All Stories", url: "/" }, { title: contentJson.title, url: `/${contentJson.slug}` }]}
-                />
+                data={[{ title: "All Stories", url: "/" }, { title: contentJson.title, url: `/${contentJson.slug}` }]}
+            />
 
-            <div className="w-full z-20 max-w-5xl mb-48">
-                <div className={`flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-8 mb-4 bg-fuchsia-50/80 dark:bg-slate-50/80 rounded-b-md border-b-4 border-fuchsia-900/95 dark:border-slate-900/95`}>
+            <div className="w-full z-20 max-w-6xl mb-48">
+                <div className={`flex flex-wrap justify-center items-center w-full mx-auto px-4 md:px-36 mb-4 bg-fuchsia-50/80 dark:bg-slate-700/60 rounded-md mt-12 pt-8 border-b-4 border-fuchsia-900/95 dark:border-slate-900/95 shadow-md shadow-slate-900/20`}>
                     <div
                         className={`relative grow w-full ${contentJson.categories.includes("silly") ? "font-comicsans" : 'font-arial'}`}
                     >
@@ -44,6 +58,8 @@ const ContentPage = ({ data }) => {
                             leaveTo="opacity-0">
                             <div className='pb-12 md:pb-24 relative grow'>
                                 <ContentCard
+                                    unreadStories={unreadStories}
+                                    setUnreadStories={setUnreadStories}
                                     cardData={contentJson} />
                             </div>
                         </Transition>
