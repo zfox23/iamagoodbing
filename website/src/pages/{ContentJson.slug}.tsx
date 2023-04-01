@@ -89,6 +89,7 @@ query ContentQuery($id: String!) {
                 publicURL
             }
             alt
+            caption
             preferredHeightPX
         }
         html

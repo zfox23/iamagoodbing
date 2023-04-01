@@ -37,6 +37,13 @@ const ChangelogPage = () => {
                         <h2 className='font-semibold text-2xl !mt-8'>Changelog</h2>
                         <div className='space-y-8'>
                             <div>
+                                <h3 className='font-semibold text-lg'>(2023-04-01) Bugfixes</h3>
+                                <ul className='list-disc ml-4 !mt-2'>
+                                    <li>Fixed a bug where image captions wouldn't show up on individual story pages <a href="/ftc-complaint-against-openai-01" target="_blank" className='underline'>like this one</a>.</li>
+                                </ul>
+                            </div>
+
+                            <div>
                                 <h3 className='font-semibold text-lg'>(2023-03-31) Unread Stories Indicator </h3>
                                 <ul className='list-disc ml-4 !mt-2'>
                                     <li>
