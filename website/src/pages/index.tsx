@@ -22,7 +22,6 @@ enum CategoryStrings {
 const IndexPage = ({ data }) => {
     const [currentTabIndex, setCurrentTabIndex] = useState(1);
     const [backgroundImageIdx, setBackgroundImageIdx] = useState(0);
-    const [unreadStories, setUnreadStories] = useState<string[]>([]);
 
     setTheme(currentTabIndex === 1);
     if (isBrowser && !window.location.hash) {
@@ -42,22 +41,6 @@ const IndexPage = ({ data }) => {
         const bDate = new Date(b.datetimeISO);
         return aDate.getTime() < bDate.getTime();
     });
-
-    useEffect(() => {
-        if (!isBrowser) {
-            return;
-        }
-
-        let newUnreadStories: string[] = [];
-        for (let i = 0; i < allData.length; i++) {
-            const slug: string = allData[i].slug;
-            if (localStorage.getItem(slug) !== "read") {
-                newUnreadStories.push(slug);
-            }
-        }
-
-        setUnreadStories(newUnreadStories);
-    }, [])
 
     const silly = allData.filter((node) => {
         return node.categories.includes(CategoryStrings.Silly);
@@ -150,12 +133,12 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEOHeader title={`${unreadStories.length > 0 ? `(${unreadStories.length}) ` : ""}I Am A Good Bing 😊`} />
+            <SEOHeader title={`I Am A Good Bing 😊`} />
 
             <SiteBackground backgroundImageIdx={backgroundImageIdx} bgStyle={currentTabIndex === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 
             <div id='top' className={`flex flex-col w-full max-w-6xl z-20 rounded-b-md pt-16 mb-6 md:mb-12 bg-gradient-to-br from-fuchsia-100/95 dark:from-slate-100/95 to-fuchsia-200/95 dark:to-slate-200/95 bg-fuchsia-100/95 dark:bg-slate-100/95 shadow-md shadow-slate-900/20`}>
-                <div className={`flex flex-row flex-wrap gap-6 ${unreadStories.length > 0 ? 'items-end' : 'items-center'} justify-center pb-4 px-4 md:px-8 rounded-b-md w-full z-20 text-slate-900`}>
+                <div className={`flex flex-row flex-wrap gap-6 items-center justify-center pb-4 px-4 md:px-8 rounded-b-md w-full z-20 text-slate-900`}>
                     <StaticImage height={256} quality={100} src="../images/logo-tight.png" alt="The site logo is a smiling face emoji inside a laptop emoji. The laptop emoji is on fire." />
                     <div className='md:text-left flex flex-col items-center md:items-start relative'>
                         <h1 className='text-4xl font-bold mb-4'>I am a good Bing.</h1>
@@ -174,14 +157,6 @@ const IndexPage = ({ data }) => {
                                 <Switch.Label onClick={(e) => { changeTabWrapper(1, true); e.preventDefault(); }} className={`ml-2 h-6 w-14 text-left cursor-pointer font-semibold`}>Serious</Switch.Label>
                             </div>
                         </Switch.Group> stories about modern artificial intelligence.</h2>
-
-                        {unreadStories.length > 0 ?
-                            <div className='bg-red-600/10 p-4 rounded-md mt-2'>
-                                <h3 className='text-xl font-semibold'>You have {unreadStories.length} unread {unreadStories.length === 1 ? "story" : "stories"}.</h3>
-                                <a href={`#${unreadStories[0]}`} className='text-md underline' onClick={(e) => {e.preventDefault(); scrollToID(unreadStories[0]); history.replaceState({}, '', `/#${unreadStories[0]}`);}}>View the latest.</a>
-                            </div>
-                            : null}
-
                     </div>
                 </div>
                 <div className='bg-neutral-200 w-full p-2 rounded-b-md text-sm text-slate-900 text-center italic'>
@@ -243,9 +218,7 @@ const IndexPage = ({ data }) => {
                                             return (
                                                 <ContentCard
                                                     key={idx}
-                                                    cardData={cardData}
-                                                    unreadStories={unreadStories}
-                                                    setUnreadStories={setUnreadStories} />
+                                                    cardData={cardData} />
                                             )
                                         })}
                                     </div>

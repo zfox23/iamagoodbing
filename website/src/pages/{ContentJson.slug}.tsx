@@ -6,8 +6,7 @@ import { ContentCard } from '../components/ContentCard';
 import { Transition } from '@headlessui/react';
 import { SiteBackground, SiteBackgroundStyles } from '../components/SiteBackground';
 import { useBackgroundImages } from '../hooks/useBackgroundImages';
-import { isBrowser, setTheme } from '../components/helpers/helpers';
-import { StaticImage } from 'gatsby-plugin-image';
+import { setTheme } from '../components/helpers/helpers';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 const TAB_CHANGE_TRANSITION_MS = 300;
 
@@ -17,20 +16,6 @@ const ContentPage = ({ data }) => {
     const newBGImageIdx = Math.floor(Math.random() * (backgroundImages.length));
 
     setTheme(contentJson.categories.includes("serious"));
-
-    const [unreadStories, setUnreadStories] = useState<string[]>([]);
-    useEffect(() => {
-        if (!isBrowser) {
-            return;
-        }
-
-        let newUnreadStories: string[] = [];
-        const slug: string = contentJson.slug;
-        if (localStorage.getItem(slug) !== "read") {
-            newUnreadStories.push(slug);
-        }
-        setUnreadStories(newUnreadStories);
-    }, [])
 
     return (
         <Layout>
@@ -58,8 +43,6 @@ const ContentPage = ({ data }) => {
                             leaveTo="opacity-0">
                             <div className='pb-12 md:pb-24 relative grow'>
                                 <ContentCard
-                                    unreadStories={unreadStories}
-                                    setUnreadStories={setUnreadStories}
                                     cardData={contentJson} />
                             </div>
                         </Transition>

@@ -37,6 +37,14 @@ const ChangelogPage = () => {
                         <h2 className='font-semibold text-2xl !mt-8'>Changelog</h2>
                         <div className='space-y-8'>
                             <div>
+                                <h3 className='font-semibold text-lg'>(2023-04-03) Removed the Unread Stories Indicator</h3>
+                                <ul className='list-disc ml-4 !mt-2'>
+                                    <li>We removed the "unread stories" indicator and related features from the site because we felt as though it may prey on some folks' compulsions to "make the notifications disappear" rather than help them meaningfully engage with the content.</li>
+                                    <li>We'll continue to think about the right way to help people make the best use of the information on this site over time.</li>
+                                </ul>
+                            </div>
+
+                            <div>
                                 <h3 className='font-semibold text-lg'>(2023-04-01) Bugfixes</h3>
                                 <ul className='list-disc ml-4 !mt-2'>
                                     <li>Fixed a bug where image captions wouldn't show up on individual story pages <a href="/ftc-complaint-against-openai-01" target="_blank" className='underline'>like this one</a>.</li>

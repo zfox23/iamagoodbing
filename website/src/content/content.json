@@ -1,5 +1,26 @@
 [
     {
+        "slug": "pizza-gpt-italy",
+        "title": "PizzaGPT: ChatGPT for Italians",
+        "categories": ["silly"],
+        "fontAwesomeIcon": "earth-europe",
+        "datetimeISO": "2023-04-03T18:59:11.824Z",
+        "image": {
+            "src": "images/01416-4210971611-pizza on a table, in italy, outdoors, cafe, digital.png",
+            "caption": "\"pizza on a table, in italy, outdoors, cafe, digital\" generated using Stable Diffusion v1.5",
+            "alt": "Three pizzas on a table. One pizza is mostly-eaten. We are looking into an Italian town square with many tables and chairs, populated with humans.",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p><a target='_blank' class='underline' href='https://twitter.com/LorenzCella'>Lorenzo Cella</a> has made ChatGPT accessible in Italy after it was <a target='_blank' href='chat-gpt-banned-italy' class='underline'>banned last Friday over privacy concerns</a>.</p><p>After machine translation, the text at the top of <a href='pizzagpt.it' target='_blank' class='underline'>pizzagpt.it</a> reads:</p><p>\"OpenAI has closed access to ChatGPT from Italy following the disputes of the privacy guarantor. PizzaGPT uses the same API as ChatGPT but does not record any type of user data.\"</p>",
+        "contributor": "Liv and Zach",
+        "links": [
+            {
+                "href": "https://www.pizzagpt.it/",
+                "text": "PizzaGPT - ChatGPT per l'Italia"
+            }
+        ]
+    },
+    {
         "slug": "ftc-complaint-against-openai-01",
         "title": "Center for AI and Digital Policy Files Formal FTC Complaint against OpenAI",
         "categories": ["serious"],
