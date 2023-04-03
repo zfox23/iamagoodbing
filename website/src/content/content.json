@@ -17,6 +17,10 @@
             {
                 "href": "https://www.pizzagpt.it/",
                 "text": "PizzaGPT - ChatGPT per l'Italia"
+            },
+            {
+                "href": "https://www-pizzagpt-it.translate.goog/info?_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
+                "text": "PizzaGPT - Translated from Italian to English via Google Translate"
             }
         ]
     },
