@@ -1,12 +1,79 @@
 [
     {
+        "slug": "ai-is-now-lying",
+        "title": "Surprising No One Who Knows How AI Works, AI is Now Lying",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "poo",
+        "datetimeISO": "2023-04-05T21:24:50.027Z",
+        "image": {
+            "src": "images/medieval-bard-google-office-building.png",
+            "caption": "\"dungeons and dragons, medieval bard holding mandolin, people dancing, ((Google office building exterior))\" generated using Stable Diffusion v1.5",
+            "alt": "dungeons and dragons, medieval bard holding mandolin, people dancing, ((Google office building exterior))",
+            "preferredHeightPX": "448"
+        },
+        "html": "<h3 class='font-semibold text-xl'>False allegations against a mayor, sexual harassment claims against a professor, and general misinformation about a range of harmful topics abound.</h3><p>It has been 0 days since AI has demonstrated the potential for harm, with OpenAI being threatened by a defamation lawsuit after ChatGPT made up crimes against an Australian Mayor. If that wasn't enough, a law professor was also accused of sexual harrasment by the chatbot, and Bing's chat is now picking up the same allegation, using the articles <i>about the false allegations</i> as the source of the generated text.</p><p>Meanwhile, Google Bard has been proven to make up stories about a whole range of fake news, as evidenced by research published today by the Center for Countering Digital Hate. The researchers were able to generate dozens of narratives that echoed falsehoods related to Ukraine, Covid, Vaccines, Racism, Antisemitism... and the list goes on.</p><p>These AI chatbots don't stop at text summaries - they're generating fake articles and references to publications as \"sources\" that don't actually exist, which further perpetuates the issue of online truth and verification.</p><p>Listen, I know that I tend to come in strong here with what might seem like anti-AI bias. My hot take is that most people continue to not take the harms that this tech is capable of seriously enough. People's actual, real lives are at stake here.</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://counterhate.com/research/misinformation-on-bard-google-ai-chat/",
+                "text": "Counter Hate: Misinformation on Bard, Google’s new AI chat"
+            },
+            {
+                "href": "https://arstechnica.com/tech-policy/2023/04/openai-may-be-sued-after-chatgpt-falsely-says-aussie-mayor-is-an-ex-con/",
+                "text": "Ars Technica: OpenAI threatened with landmark defamation lawsuit over ChatGPT false claims"
+            }
+        ]
+    },
+    {
+        "slug": "samsung-leak-confidential-data-using-chatgpt",
+        "title": "Samsung Workers Ask ChatGPT for Help with Confidential Data",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "face-surprise",
+        "datetimeISO": "2023-04-04T21:24:50.027Z",
+        "image": {
+            "src": "images/clean-room.png",
+            "caption": "\"employee in clean room carrying large circular ((silicon wafer))\" generated using Stable Diffusion v1.5",
+            "alt": "employee in clean room carrying large circular ((silicon wafer))",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p>Samsung Semiconductor fab engineers recently asked ChatGPT for help fixing bugs in their applications' source code. To do this, those employees sent ChatGPT (and thus OpenAI) samples of proprietary code.</p><p>I'm surprised I haven't already heard of ChatGPT spitting out confidential code snippets.</p><p><span class='font-semibold'>\"But why would the friendly magic talking robot betray my trust?\"</span> <i>-nasamuffin on Discord</i></p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://www.tomshardware.com/news/samsung-fab-workers-leak-confidential-data-to-chatgpt",
+                "text": "Tom's Hardware: Samsung Fab Workers Leak Confidential Data While Using ChatGPT"
+            }
+        ]
+    },
+    {
+        "slug": "reddit-ubuntu-question-answered-by-chatgpt",
+        "title": "ChatGPT answers a Redditor's question about Ubuntu",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "computer",
+        "datetimeISO": "2023-04-04T18:09:42.000Z",
+        "image": {
+            "src": "images/chatgpt-linux-reddit.png",
+            "caption": "A Reddit user asked ChatGPT to answer another user's question. ChatGPT nailed the response.",
+            "alt": "A screenshot of a conversation between a person and ChatGPT. A partial transcript is below.",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p>Reddit user /u/Pauloedsonjk asked the Ubuntu subreddit for some help, wanting to know if anyone had a solution for making their cursor vanish after a couple of seconds. /u/spxak1 replied with a link to a screenshot of a conversation between themselves and ChatGPT:</p><p><span class='font-semibold'>/u/spxak1:</span> How can I to do for my cursor to vanish after any seconds [sic]? 2s for example. Linux</p><p><span class='font-semibold'>ChatGPT:</span> You can use the <code>unclutter</code> utility in Linux to make the mouse cursor disappear after a certain period of inactivity.</p><p>ChatGPT goes on to explain how to install and use Unclutter, and answers the question beautifully.</p><p>There are a certain class of problems that AI trained with large language models will be able to answer better than most humans. This is one of them.</p><p>I like how the entirety of /u/spxak1's comment was an Imgur link to the conversation. Mic drop 🎤</p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://www.reddit.com/r/Ubuntu/comments/12brc65/how_can_i_to_do_for_my_cursor_to_vanish_after_any/",
+                "text": "/r/Ubuntu - How can I to do for my cursor to vanish after any seconds?"
+            }
+        ]
+    },
+    {
         "slug": "pizza-gpt-italy",
         "title": "PizzaGPT: ChatGPT for Italians",
         "categories": ["silly"],
         "fontAwesomeIcon": "earth-europe",
         "datetimeISO": "2023-04-03T18:59:11.824Z",
         "image": {
-            "src": "images/01416-4210971611-pizza on a table, in italy, outdoors, cafe, digital.png",
+            "src": "images/pizza.png",
             "caption": "\"pizza on a table, in italy, outdoors, cafe, digital\" generated using Stable Diffusion v1.5",
             "alt": "Three pizzas on a table. One pizza is mostly-eaten. We are looking into an Italian town square with many tables and chairs, populated with humans.",
             "preferredHeightPX": "448"
@@ -31,7 +98,7 @@
         "fontAwesomeIcon": "file-pdf",
         "datetimeISO": "2023-04-01T14:38:26.768Z",
         "image": {
-            "src": "images/01412-3558010278-Center for AI and Digital Policy header image.png",
+            "src": "images/CADPheader.png",
             "caption": "\"Center for AI and Digital Policy header image\" generated using Stable Diffusion v1.5",
             "alt": "Several white buildings that look like they belong in Washington DC at night with a blue circular logo in the middle.",
             "preferredHeightPX": "448"
@@ -114,7 +181,7 @@
         "fontAwesomeIcon": "hand",
         "datetimeISO": "2023-03-29T23:41:27.120Z",
         "image": {
-            "src": "images/01409-2848266612-A stop sign.png",
+            "src": "images/01409-2848266612-stop-sign.png",
             "alt": "A stop sign generated by Stable Diffusion.",
             "caption": "v1-5-pruned-emaonly.ckpt [cc6cb27103]'s vision of a stop sign, generated by Stable Diffusion",
             "preferredHeightPX": "618"

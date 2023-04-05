@@ -8,7 +8,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-
     "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -16,7 +15,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "path": "./src/content/"
+        path: `${__dirname}/src/content/`,	
+        name: 'content'
       }
     },
     {
