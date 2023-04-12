@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEOHeader title={`I Am A Good Bing 😊`} />
+            <SEOHeader title={`I Am A Good Bing :)`} />
 
             <SiteBackground backgroundImageIdx={backgroundImageIdx} bgStyle={currentTabIndex === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 

@@ -15,7 +15,7 @@ const ChangelogPage = () => {
 
     return (
         <Layout>
-            <SEOHeader title="Release Notes · I Am A Good Bing 😊" description="Software changelogs are neat. Here's our release notes." />
+            <SEOHeader title="Release Notes | I Am A Good Bing :)" description="Software changelogs are neat. Here's our release notes." />
 
             <SiteBackground backgroundImageIdx={newBGImageIdx} bgStyle={SiteBackgroundStyles.Images} />
 

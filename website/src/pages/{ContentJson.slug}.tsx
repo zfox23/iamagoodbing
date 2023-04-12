@@ -19,7 +19,7 @@ const ContentPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEOHeader title={contentJson.title} description="Read this story on I Am A Good Bing 😊 - A place for content about modern artificial intelligence sourced by the critical community." image={contentJson.image.src.publicURL} />
+            <SEOHeader title={contentJson.title} description="Read this story on I Am A Good Bing :) - A place for content about modern artificial intelligence sourced by the critical community." image={contentJson.image.src.publicURL} />
 
             <SiteBackground backgroundImageIdx={newBGImageIdx} bgStyle={contentJson.categories.includes("silly") === 0 ? SiteBackgroundStyles.Images : SiteBackgroundStyles.Words} />
 

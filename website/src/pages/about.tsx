@@ -9,7 +9,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag';
 const AboutPage = () => {
     return (
         <Layout>
-            <SEOHeader title="About · I Am A Good Bing 😊" description="The people behind the projects - and some easter eggs, too." />
+            <SEOHeader title="About | I Am A Good Bing :)" description="The people behind the projects - and some easter eggs, too." />
 
             <SiteBackground bgStyle={SiteBackgroundStyles.Words} />
 
