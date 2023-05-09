@@ -1,5 +1,33 @@
 [
     {
+        "slug": "meta-vp-says-the-quiet-part-out-loud",
+        "title": "Meta VP Says the Quiet Part Out Loud: Don't Listen to Computer Scientists Who Care About Ethics",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "circle-xmark",
+        "datetimeISO": "2023-05-09T15:29:06Z",
+        "image": {
+            "src": "images/yann.png",
+            "caption": "Yann tells on himself, explains a lot about Facebook",
+
+            "alt": "A screenshot of a Meta executive's LinkedIn post that says not to listen to Computer Scientists who care about social consquences of their work",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p> It's been a long time since I read something that physically made me ill, but this did it this morning. Yann LeCun, a VP at Meta, wrote a distressingly well-received LinkedIn post that explicitly tells people \"DO NOT listen to computer scientists who are concerned by the social implications of their work.\" This is <i>distressing</i>, everyone, and we should be <b>very concerned</b>. LeCun is so privileged and not concerned about the implications of this statement that he was willing to throw researchers under the bus to the world, and continues to amplify the capitalist, white supremacist, hegemonic perspective that we're not allowed to care about how our work impacts society. He instead thinks we should leave that part to the economists. </p> <p> What's next, not listening to the biochemists who are concerned about the health impacts of new medicines? Why should computer scientists be exempt from understanding the implications of their work? The fact that a VP at Meta feels so confident as to share this opinion boldly and openly should concern all of us - it's an attempt to silence and stigmatize the people who are rightfully questioning what we're getting ourselves into. </p><p>I guess this shouldn't surprise me, because Facebook has historically taken this approach to <a href=\"https://www.amnesty.org/en/latest/news/2022/09/myanmar-facebooks-systems-promoted-violence-against-rohingya-meta-owes-reparations-new-report/\"> destabilizing governments on their social media site </a>, but it did. </p> <p>I haven't quite figured out how to cope yet, since so much of the open source community growing around AI and ML is based on Meta's leaked LLM, but this leaves a horrific taste in my mouth that reeks of a larger threat of censorship against those who question the power dynamics of big tech. </p>"
+        
+        ,
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www.amnesty.org/en/latest/news/2022/09/myanmar-facebooks-systems-promoted-violence-against-rohingya-meta-owes-reparations-new-report/",
+                "text": "Amnesty.org's writeup on how Facebook promotes violence"
+            },
+            {
+                "href": "https://www.theguardian.com/world/2022/oct/20/brazil-election-disinformation-youtube-facebook",
+                "text": "The Guardian's reporting on Facebook's Brazilian Election disinformation problem"
+            }
+        ]
+    },
+    {
         "slug": "i-have-been-a-good-balenciaga",
         "title": "I have been a good Balenciaga. 😊",
         "categories": ["silly"],
