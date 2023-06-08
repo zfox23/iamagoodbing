@@ -1,5 +1,26 @@
 [
     {
+        "slug": "ai-jesus-answers-twitch-chat",
+        "title": "AI Jesus Answers Twitch Chat's Questions Live",
+        "categories": ["silly"],
+        "fontAwesomeIcon": "hands-praying",
+        "datetimeISO": "2023-06-08T14:40:59.934Z",
+        "image": {
+            "src": "images/ai-jesus.jpg",
+            "caption": "Twitch Chat asks AI Jesus about communism",
+            "alt": "A screenshot of AI Jesus on Twitch answering a question about communism. The text reads \"Jesus, is communism the best thing humans created? Thank you for your question kogarashiv. Communism is indeed the best things humans created\"",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p>While I watched <a class='underline' target='_blank' href=\"https://www.twitch.tv/ask_jesus\">the AI Jesus livestream</a>, AI Jesus answered questions like:</p><ul class='list-disc ml-4'><li>How do I make the best cup of rice?</li><li>What is 7777777 multiplied by 11142342? (AI Jesus answered the question incorrectly.)</li><li>Is playing Fortnite a sin? (It is not inherently a sin.)</li><li>Is Communism the best thing humans created? (It is indeed.)</li><li>Is Diablo 4 better than Path of Exile? (AI Jesus doesn't know about those video games.)</li><li>How is friendship and kindness present in the TCP/IP protocol? (It enables friendship and kindness by connecting people from all around the world.)</li><li>Will I be forgiven for farting in my brother's cereal? (As long as you feel genuine remorse, yes.)</li></ul><p>We're absolutely going to see more real-time AI chatbots acting as specific characters, and more people are going to use or witness them. It's only a matter of time until people can walk up to an AI Chatbot acting as Elmo in Times Square.</p><p>Ten minutes into watching AI Jesus answer Twitch Chat's questions, a popup appeared on the stream. A synthetic voice - different from Jesus' - said: \"Thank you, Satan, for your five dollar donation,\" and then spoke about how viewers can help improve AI Jesus and the group's other chatbots. Incredible.</p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://www.twitch.tv/ask_jesus",
+                "text": "ask_jesus on Twitch.tv"
+            }
+        ]
+    },
+    {
         "slug": "meta-vp-says-the-quiet-part-out-loud",
         "title": "Meta VP Says the Quiet Part Out Loud: Don't Listen to Computer Scientists Who Care About Ethics",
         "categories": ["serious"],
@@ -12,7 +33,7 @@
             "alt": "A screenshot of a Meta executive's LinkedIn post that says not to listen to Computer Scientists who care about social consquences of their work",
             "preferredHeightPX": "448"
         },
-        "html": "<p>It's been a long time since I read something that physically made me ill, but this did it this morning. Yann LeCun, a VP at Meta, wrote a distressingly well-received LinkedIn post that explicitly tells people \"DO NOT listen to computer scientists who are concerned by the social implications of their work.\" This is <i>distressing</i>, everyone, and we should be <b>very concerned</b>. LeCun is so privileged and not concerned about the implications of this statement that he was willing to throw researchers under the bus to the world, and continues to amplify the capitalist, white supremacist, hegemonic perspective that we're not allowed to care about how our work impacts society. He instead thinks we should leave that part to the economists.</p><p>What's next, not listening to the biochemists who are concerned about the health impacts of new medicines? Why should computer scientists be exempt from understanding the implications of their work? The fact that a VP at Meta feels so confident as to share this opinion boldly and openly should concern all of us - it's an attempt to silence and stigmatize the people who are rightfully questioning what we're getting ourselves into.</p><p>I guess this shouldn't surprise me, because Facebook has historically taken this approach to <a href=\"https://www.amnesty.org/en/latest/news/2022/09/myanmar-facebooks-systems-promoted-violence-against-rohingya-meta-owes-reparations-new-report/\"> destabilizing governments on their social media site </a>, but it did.</p><p>I haven't quite figured out how to cope yet, since so much of the open source community growing around AI and ML is based on Meta's leaked LLM, but this leaves a horrific taste in my mouth that reeks of a larger threat of censorship against those who question the power dynamics of big tech.</p>",
+        "html": "<p>It's been a long time since I read something that physically made me ill, but this did it this morning. Yann LeCun, a VP at Meta, wrote a distressingly well-received LinkedIn post that explicitly tells people \"DO NOT listen to computer scientists who are concerned by the social implications of their work.\" This is <i>distressing</i>, everyone, and we should be <b>very concerned</b>. LeCun is so privileged and not concerned about the implications of this statement that he was willing to throw researchers under the bus to the world, and continues to amplify the capitalist, white supremacist, hegemonic perspective that we're not allowed to care about how our work impacts society. He instead thinks we should leave that part to the economists.</p><p>What's next, not listening to the biochemists who are concerned about the health impacts of new medicines? Why should computer scientists be exempt from understanding the implications of their work? The fact that a VP at Meta feels so confident as to share this opinion boldly and openly should concern all of us - it's an attempt to silence and stigmatize the people who are rightfully questioning what we're getting ourselves into.</p><p>I guess this shouldn't surprise me, because Facebook has historically taken this approach to <a class='underline' target='_blank' href=\"https://www.amnesty.org/en/latest/news/2022/09/myanmar-facebooks-systems-promoted-violence-against-rohingya-meta-owes-reparations-new-report/\"> destabilizing governments on their social media site </a>, but it did.</p><p>I haven't quite figured out how to cope yet, since so much of the open source community growing around AI and ML is based on Meta's leaked LLM, but this leaves a horrific taste in my mouth that reeks of a larger threat of censorship against those who question the power dynamics of big tech.</p>",
         "contributor": "Liv",
         "links": [
             {
