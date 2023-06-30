@@ -1,5 +1,26 @@
 [
     {
+        "slug": "ai-is-human-intelligence-all-along",
+        "title": "As it turns out, AI has just been Human Intelligence All Along",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "people-group",
+        "datetimeISO": "2023-06-30T13:59:27Z",
+        "image": {
+            "src": "images/anonymous-ai-workers.png",
+            "caption": "Canva's text to AI tool generates a disorted - but perhaps accurate - image of anonymous workers",
+            "alt": "Rows of faceless people with warped bodies working on computers",
+            "preferredHeightPX": "448"
+        },
+        "html": "<p> Let's stop pretending there is anything \"artificial\" about AI. As this incredibly in-depth article by The Verge illustrates, AI is simply a wrapper around billions of human-hours going into classification. Of course this work is underpaid, undervalued, and underappreciated by the Silicon Valley Billionaires, who claim that doing this work is all in the service of their mission to become god. </p><p> My latest conspiracy theory is that Sam Altman paid for the content moderation company in Kenya to name itself Sama so that when you google the human rights violations that the company is causing to their content moderators and labellers, you just find all of the YC hero-worship instead. (Sama is also Sam Altman's online moniker). </p><p> I'm continuing to be completely disgusted by technologists and how much they're willing to ignore in order to profit. Good on The Verge for at least trying to point this out, here. </p> <p> AI is continuing to further the digital divide and wealth disparity between those who actually make this technology work and those who claim they are the ones who managed to figure it all out. If the best that Silicon Valley billionaires can do is pay less than $2 a day to subject people to horrific imagery, maybe this isn't something worth building. As on worker puts it so eloquently: \"I really am wasting my life here if I made somebody a billionaire and I’m earning a couple of bucks a week.\"</p>",
+        "contributor": "Liv",
+        "links": [
+            {
+                "href": "https://www.theverge.com/features/23764584/ai-artificial-intelligence-data-notation-labor-scale-surge-remotasks-openai-chatbots",
+                "text": "Read the original article on The Verge"
+            }
+        ]
+    },
+    {
         "slug": "ai-jesus-answers-twitch-chat",
         "title": "AI Jesus Answers Twitch Chat's Questions Live",
         "categories": ["silly"],
