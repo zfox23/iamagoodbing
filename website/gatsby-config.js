@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/content/`,	
+        path: `${__dirname}/src/content/`,
         name: 'content'
       }
     },
@@ -55,7 +55,11 @@ module.exports = {
       options: {
         host: 'https://iamagoodbing.ai',
         sitemap: 'https://iamagoodbing.ai/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        policy: [
+          { userAgent: '*', allow: '/' },
+          { userAgent: 'Google-Extended', disallow: '/' },
+          { userAgent: 'GPTBot', disallow: '/' }
+        ]
       }
     },
     {
@@ -86,7 +90,7 @@ module.exports = {
                   custom_elements: [{ "content:encoded": node.html }],
                   enclosure: {
                     'url': `${site.siteMetadata.siteUrl}${node.image.src.publicURL}`,
-                    'type' : 'image/jpeg'
+                    'type': 'image/jpeg'
                   }
                 })
               })

@@ -2,7 +2,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
 import { useElementOnScreen } from "../hooks/useElementOnScreen";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
-import { isBrowser, onClickHash } from './helpers/helpers';
 import { twMerge } from 'tailwind-merge';
 
 export const ContentCard = ({ cardData }) => {
@@ -20,17 +19,16 @@ export const ContentCard = ({ cardData }) => {
         sticky: true
     });
 
-
     return (
         <div ref={containerRef} id={cardData.slug} className={`${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'} transition-{transform, opacity, scale} duration-500 flex flex-col items-center justify-start text-slate-50 w-full md:mb-24 break-words mb-12`}>
             <div className='flex flex-col items-center'>
                 <i className={`bg-fuchsia-700 dark:bg-slate-700 rounded-t-md p-2 fa-solid fa-${cardData.fontAwesomeIcon || 'robot'}`}></i>
                 <h3 className={`p-2 text-sm font-semibold bg-fuchsia-700 dark:bg-slate-700 rounded-t-md shadow-md shadow-slate-900/20`}>
-                    <a href={`#${cardData.slug}`} className='hover:underline' onClick={onClickHash}>{dateString}</a>
+                    <a href={`/${cardData.slug}`} className='hover:underline'>{dateString}</a>
                 </h3>
             </div>
             <div className='w-full flex-col items-center justify-start rounded-md shadow-md shadow-slate-900/20'>
-                <h2 className={`w-full bg-fuchsia-700 dark:bg-slate-700 rounded-t-md font-semibold text-xl py-3 px-4 text-center`}><a href={`#${cardData.slug}`} className='hover:underline' onClick={onClickHash}>{cardData.title}</a></h2>
+                <h2 className={`w-full bg-fuchsia-700 dark:bg-slate-700 rounded-t-md font-semibold text-xl py-3 px-4 text-center`}><a href={`/${cardData.slug}`} className='hover:underline'>{cardData.title}</a></h2>
                 <div className={`bg-slate-50 w-full flex flex-col flex-wrap ${hasLinks ? "" : "rounded-b-md border-b-4 border-fuchsia-900/95 dark:border-slate-900/95"}`}>
                     <a className="inline-block max-h-[calc(100vh-180px)] w-full relative overflow-clip cursor-zoom-in group mx-auto" href={cardData.image.src.publicURL} target="_blank" style={{ "height": `${cardData.image.preferredHeightPX}px` }}>
                         <GatsbyImage
