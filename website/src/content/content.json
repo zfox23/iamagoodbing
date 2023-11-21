@@ -1,5 +1,26 @@
 [
     {
+        "slug": "stephen-fry-nick-cave-letter-chatgpt-creativity",
+        "title": "Nick Cave writes a letter about ChatGPT and human creativity; Stephen Fry reads it",
+        "categories": ["serious"],
+        "fontAwesomeIcon": "comment-dots",
+        "datetimeISO": "2023-11-21T19:35:00Z",
+        "image": {
+            "src": "images/hell.jpg",
+            "caption": "Hell by Richard Phillips, 2007 - the image Nick Cave originally chose to accompany his letter",
+            "alt": "A dark devil figure consuming several humans with flames in the background.",
+            "preferredHeightPX": "448"
+        },
+        "html": "<iframe width=\"100%\" height=\"472\" src=\"https://www.youtube-nocookie.com/embed/iGJcF4bLKd4?si=ikNW5aVHF5cRyYbQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe><p>I implore you: Watch Stephen Fry read this letter in the above the 4 minute and 42 second video. You can read the original letter by tapping the source link below.</p>",
+        "contributor": "Zach",
+        "links": [
+            {
+                "href": "https://www.theredhandfiles.com/chatgpt-making-things-faster-and-easier/",
+                "text": "\"ChatGPT Making Things Faster and Easier\" on The Red Hand Files by Nick Cave"
+            }
+        ]
+    },
+    {
         "slug": "microsoft-loves-disney-so-much",
         "title": "Microsoft fears Disney's power, adjusts Bing AI's generation policies",
         "categories": ["serious"],
